@@ -42,14 +42,14 @@ The app contains a dashboard blueprint that is empty.  This is included only as 
 ## Example : Add table 'pet' to models_pab.py
 See notes at top of models_pab.py for detailed descriptions of the dt_column_spec and form_spec dictionaries.
 
-Start by checking out tag vn.m.o from github.  This is the version without the 'pet' table.
+Start by checking out tag v0.1.0 from github.  This is the version without the 'pet' table.
 
 Add a table named 'pet' to the database.  It will have columns for name, animal, owner, weight (lbs), weight (kg), weight (st).  The owner will be a link to a person from the user table.  This will demonstrate using a foreign key and SQLAlchemy relationship.  The weight (kg) and weight (st) columns provide a simple case to show how to enter columns whose values are calculated (not entered from a form).
 
 1. Add Pet class to models_pab.py
     1. Use Flask-SQLAlchemy base class and add dt_column_spec and form_spec to this class.  (It's probably easiest to copy one of the existing classes and modify it).
     2. Override set_computed_columns() and add the functions to compute the column values to the 'Pet' class. (Only do this if there are computed columns).
-    3. Override __str__() to set the column with values that will be shown in dropdown lists.
+    3. Override \__str\__() to set the column with values that will be shown in dropdown lists.
     ~~~
     class Pet(db.Model, All_mixin):
         id = db.Column(db.Integer, primary_key=True)
