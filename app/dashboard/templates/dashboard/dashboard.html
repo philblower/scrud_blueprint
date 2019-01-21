@@ -1,0 +1,30 @@
+{% extends "dashboard/base.html" %}
+{% import "bootstrap/utils.html" as utils %}
+{% block pagewrapper %}
+<main role="main" class="col-lg-12">
+  <div class="panel panel-default">
+    <div class="panel-heading">Panel-heading</div>
+    <div class="panel-body">
+      <p>
+        This is an empty holder that can be used to implement a dashboard for the database
+      </p>
+      <br>
+      <p>
+        Select database from menu to get a dropdown list of database tables.
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+        <div class="row">
+          <div class="col-md-12">
+            {{utils.flashed_messages(messages)}}
+          </div>
+        </div>
+      {% endif %}
+    {% endwith %}
+  </div>
+</main>
+{% endblock %}

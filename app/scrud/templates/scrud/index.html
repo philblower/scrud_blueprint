@@ -1,0 +1,72 @@
+{% extends 'scrud/base.html' %}
+<!-- PAB: I am using underscores, not camelCase or hyphens, for my variable naming convention -->
+{% block content %}
+<!-- <body> -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 bg-info" id="database">Database</div>
+      <div class="col-sm-6 bg-primary" id="table_name">Table</div>
+    </div>
+  </div>
+
+  <br />
+    <!-- DataTable container -->
+  <div class="container">
+    <div class="container" id="table_container">
+        <table class="datatable" id="myTable"></table>
+      <br />
+      <button type="button" class="button" id="create_record_button">create record</button>
+    </div>
+
+    <!-- create or update record form -->
+    <form class="form-horizontal" role="form" id="update_record_form">
+      <div class="modal fade" id="my_modal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 id='modal_title'>Modal Title</h4>
+                    </div>
+                    <div class="modal-body" style="padding:40px 50px;">
+                        <div id="myForm"> </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary" id="modalSubmit">Submit</button>
+                      <button type="submit" id="my_modal_cancel" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- Confirm delete modal -->
+    <div class="modal fade" id="confirm_delete_modal" role="dialog">
+          <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                  <div class="modal-header" style="padding:35px 50px;">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 id='modal_title'>Delete record?</h4>
+                  </div>
+                  <div class="modal-body" style="padding:40px 50px;">
+                      <p>
+                        Click OK to delete row.
+                      </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" id="confirm_delete_btn " data-dismiss="modal">OK</button>
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"> Cancel</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div> <!-- container -->
+  <div id="message_container">
+    <div id="message" class="success">
+      <p>This is a success message.</p>
+    </div>
+  </div>
+<!-- </body> -->
+{% endblock %}

@@ -1,0 +1,986 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="dns-prefetch" href="https://github.githubassets.com">
+  <link rel="dns-prefetch" href="https://avatars0.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars1.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars2.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://avatars3.githubusercontent.com">
+  <link rel="dns-prefetch" href="https://github-cloud.s3.amazonaws.com">
+  <link rel="dns-prefetch" href="https://user-images.githubusercontent.com/">
+
+
+
+  <link crossorigin="anonymous" media="all" integrity="sha512-pWLt6abkYhNeAHaDrPVG0yXCtIGRuCkwSUqQpsyN6smAIpIt+Iuq2IZKmoH9l3Cy/9ZnjvVrFZnvFFjGiqE3EA==" rel="stylesheet" href="https://github.githubassets.com/assets/frameworks-a3b8a10d4a9e37a78f033ef4a4f525f5.css" />
+  <link crossorigin="anonymous" media="all" integrity="sha512-G7mYHEt7Y7zFn7hm7gLgJ5Ia5PcZHK28iGvw/rgXS3YlUDB0FDZGpUIXVgyLQmFkCchdlLcw48n2EqPZnJCC1Q==" rel="stylesheet" href="https://github.githubassets.com/assets/github-23be9924dc912cdb790c326e87efcc44.css" />
+  
+  
+  
+  
+  
+
+  <meta name="viewport" content="width=device-width">
+  
+  <title>bootstrap-datepicker/bootstrap-datepicker3.standalone.css.map at master · uxsolutions/bootstrap-datepicker</title>
+    <meta name="description" content="A datepicker for twitter bootstrap (@twbs). Contribute to uxsolutions/bootstrap-datepicker development by creating an account on GitHub.">
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
+  <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
+  <meta property="fb:app_id" content="1401488693436528">
+
+    
+    <meta property="og:image" content="https://avatars3.githubusercontent.com/u/16959059?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="uxsolutions/bootstrap-datepicker" /><meta property="og:url" content="https://github.com/uxsolutions/bootstrap-datepicker" /><meta property="og:description" content="A datepicker for twitter bootstrap (@twbs). Contribute to uxsolutions/bootstrap-datepicker development by creating an account on GitHub." />
+
+  <link rel="assets" href="https://github.githubassets.com/">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzUxNzM4NDQ5OjRmYTM5ODhmYThjZGRlODhkMTU4NDMzNzdkNmQ3ODk2ZjFjMzY2MjFmNzM3YWE1MTcyZDUyMjI2MjVmMjNkMmM=--1f34d2809f655b81b71c9797b1642d0c587be996">
+  <meta name="pjax-timeout" content="1000">
+  <link rel="sudo-modal" href="/sessions/sudo_modal">
+  <meta name="request-id" content="D149:3277:1E8EED:2E5CB1:5C3E3180" data-pjax-transient>
+
+
+  
+
+  <meta name="selected-link" value="repo_source" data-pjax-transient>
+
+      <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
+    <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
+    <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
+
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D149:3277:1E8EED:2E5CB1:5C3E3180" /><meta name="octolytics-dimension-region_edge" content="sea" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="22202681" /><meta name="octolytics-actor-login" content="philblower" /><meta name="octolytics-actor-hash" content="d018c5954278dc6505905b91a4a80c1361816d9e4a9b1a564ba178657da927a3" />
+<meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
+
+
+
+    <meta name="google-analytics" content="UA-3769691-2">
+
+  <meta class="js-ga-set" name="userId" content="8c9e28b1e5a25452af1e21010c0a83de" %>
+
+<meta class="js-ga-set" name="dimension1" content="Logged In">
+
+
+
+  
+
+      <meta name="hostname" content="github.com">
+    <meta name="user-login" content="philblower">
+
+      <meta name="expected-hostname" content="github.com">
+    <meta name="js-proxy-site-detection-payload" content="NmY3MGE3Yzk0ODZhZmJhM2MwZjM4NGRmNmE1ZWI0MzExYmQwNjc2ZGY4ZDAwZDFjMzY3ODAxMTNjMmU4ZmVlZXx7InJlbW90ZV9hZGRyZXNzIjoiOTYuMzguMTQwLjExOSIsInJlcXVlc3RfaWQiOiJEMTQ5OjMyNzc6MUU4RUVEOjJFNUNCMTo1QzNFMzE4MCIsInRpbWVzdGFtcCI6MTU0NzU3OTgwMiwiaG9zdCI6ImdpdGh1Yi5jb20ifQ==">
+
+    <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT,DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,RELATED_ISSUES,MARKETPLACE_INSIGHTS_V2">
+
+  <meta name="html-safe-nonce" content="79399b8894bf96f55a483bc926ae8f7245dbf98f">
+
+  <meta http-equiv="x-pjax-version" content="013860b80a90238041649c044739c118">
+  
+
+      <link href="https://github.com/uxsolutions/bootstrap-datepicker/commits/master.atom" rel="alternate" title="Recent Commits to bootstrap-datepicker:master" type="application/atom+xml">
+
+  <meta name="go-import" content="github.com/uxsolutions/bootstrap-datepicker git https://github.com/uxsolutions/bootstrap-datepicker.git">
+
+  <meta name="octolytics-dimension-user_id" content="16959059" /><meta name="octolytics-dimension-user_login" content="uxsolutions" /><meta name="octolytics-dimension-repository_id" content="3744545" /><meta name="octolytics-dimension-repository_nwo" content="uxsolutions/bootstrap-datepicker" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="3744545" /><meta name="octolytics-dimension-repository_network_root_nwo" content="uxsolutions/bootstrap-datepicker" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
+
+
+    <link rel="canonical" href="https://github.com/uxsolutions/bootstrap-datepicker/blob/master/dist/css/bootstrap-datepicker3.standalone.css.map" data-pjax-transient>
+
+
+  <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
+
+  <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
+
+  <link rel="mask-icon" href="https://github.githubassets.com/pinned-octocat.svg" color="#000000">
+  <link rel="icon" type="image/x-icon" class="js-site-favicon" href="https://github.githubassets.com/favicon.ico">
+
+<meta name="theme-color" content="#1e2327">
+
+  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
+  <meta name="apple-mobile-web-app-title" content="GitHub">
+
+
+  <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials">
+
+  </head>
+
+  <body class="logged-in env-production false page-blob">
+    
+
+  <div class="position-relative js-header-wrapper ">
+    <a href="#start-of-content" tabindex="1" class="p-3 bg-blue text-white show-on-focus js-skip-to-content">Skip to content</a>
+    <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
+
+    
+    
+    
+
+
+        
+<header class="Header  f5" role="banner">
+  <div class="d-flex flex-justify-between px-3 ">
+    <div class="d-flex flex-justify-between ">
+      <div class="">
+        <a class="header-logo-invertocat" href="https://github.com/" data-hotkey="g d" aria-label="Homepage" data-ga-click="Header, go to dashboard, icon:logo">
+  <svg height="32" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+
+      </div>
+
+    </div>
+
+    <div class="HeaderMenu d-flex flex-justify-between flex-auto">
+      <nav class="d-flex" aria-label="Global">
+            <div class="">
+              <div class="header-search scoped-search site-scoped-search js-site-search position-relative js-jump-to"
+  role="combobox"
+  aria-owns="jump-to-results"
+  aria-label="Search or jump to"
+  aria-haspopup="listbox"
+  aria-expanded="false"
+>
+  <div class="position-relative">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-site-search-form" data-scope-type="Repository" data-scope-id="3744545" data-scoped-search-url="/uxsolutions/bootstrap-datepicker/search" data-unscoped-search-url="/search" action="/uxsolutions/bootstrap-datepicker/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <label class="form-control header-search-wrapper header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center js-chromeless-input-container">
+        <input type="text"
+          class="form-control header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+          data-hotkey="s,/"
+          name="q"
+          value=""
+          placeholder="Search or jump to…"
+          data-unscoped-placeholder="Search or jump to…"
+          data-scoped-placeholder="Search or jump to…"
+          autocapitalize="off"
+          aria-autocomplete="list"
+          aria-controls="jump-to-results"
+          aria-label="Search or jump to…"
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=jdBxdcso7c2t2FB+NUQ5Mwbl7Lj0DhG0BCqctnCMCQCzIflKdwyxWPHb/PilYMMfaZR9A/5/X+KuCKEDfiB4+A=="
+          spellcheck="false"
+          autocomplete="off"
+          >
+          <input type="hidden" class="js-site-search-type-field" name="type" >
+            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="" class="mr-2 header-search-key-slash">
+
+            <div class="Box position-absolute overflow-hidden d-none jump-to-suggestions js-jump-to-suggestions-container">
+              
+<ul class="d-none js-jump-to-suggestions-template-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-suggestion" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+</ul>
+
+<ul class="d-none js-jump-to-no-results-template-container">
+  <li class="d-flex flex-justify-center flex-items-center f5 d-none js-jump-to-suggestion p-2">
+    <span class="text-gray">No suggested jump to results</span>
+  </li>
+</ul>
+
+<ul id="jump-to-results" role="listbox" class="p-0 m-0 js-navigation-container jump-to-suggestions-results-container js-jump-to-suggestions-results-container">
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-scoped-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+  
+
+<li class="d-flex flex-justify-start flex-items-center p-0 f5 navigation-item js-navigation-item js-jump-to-global-search d-none" role="option">
+  <a tabindex="-1" class="no-underline d-flex flex-auto flex-items-center jump-to-suggestions-path js-jump-to-suggestion-path js-navigation-open p-2" href="">
+    <div class="jump-to-octicon js-jump-to-octicon flex-shrink-0 mr-2 text-center d-none">
+      <svg height="16" width="16" class="octicon octicon-repo flex-shrink-0 js-jump-to-octicon-repo d-none" title="Repository" aria-label="Repository" viewBox="0 0 12 16" version="1.1" role="img"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-project flex-shrink-0 js-jump-to-octicon-project d-none" title="Project" aria-label="Project" viewBox="0 0 15 16" version="1.1" role="img"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      <svg height="16" width="16" class="octicon octicon-search flex-shrink-0 js-jump-to-octicon-search d-none" title="Search" aria-label="Search" viewBox="0 0 16 16" version="1.1" role="img"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"/></svg>
+    </div>
+
+    <img class="avatar mr-2 flex-shrink-0 js-jump-to-suggestion-avatar d-none" alt="" aria-label="Team" src="" width="28" height="28">
+
+    <div class="jump-to-suggestion-name js-jump-to-suggestion-name flex-auto overflow-hidden text-left no-wrap css-truncate css-truncate-target">
+    </div>
+
+    <div class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none js-jump-to-badge-search">
+      <span class="js-jump-to-badge-search-text-default d-none" aria-label="in this repository">
+        In this repository
+      </span>
+      <span class="js-jump-to-badge-search-text-global d-none" aria-label="in all of GitHub">
+        All GitHub
+      </span>
+      <span aria-hidden="true" class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+
+    <div aria-hidden="true" class="border rounded-1 flex-shrink-0 bg-gray px-1 text-gray-light ml-1 f6 d-none d-on-nav-focus js-jump-to-badge-jump">
+      Jump to
+      <span class="d-inline-block ml-1 v-align-middle">↵</span>
+    </div>
+  </a>
+</li>
+
+
+    <li class="d-flex flex-justify-center flex-items-center p-0 f5 js-jump-to-suggestion">
+      <img src="https://github.githubassets.com/images/spinners/octocat-spinner-128.gif" alt="Octocat Spinner Icon" class="m-2" width="28">
+    </li>
+</ul>
+
+            </div>
+      </label>
+</form>  </div>
+</div>
+
+            </div>
+
+          <ul class="d-flex pl-2 flex-items-center text-bold list-style-none">
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g p" data-ga-click="Header, click, Nav menu - item:pulls context:user" aria-label="Pull requests you created" data-selected-links="/pulls /pulls/assigned /pulls/mentioned /pulls" href="/pulls">
+                Pull requests
+</a>            </li>
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-hotkey="g i" data-ga-click="Header, click, Nav menu - item:issues context:user" aria-label="Issues you created" data-selected-links="/issues /issues/assigned /issues/mentioned /issues" href="/issues">
+                Issues
+</a>            </li>
+              <li class="position-relative">
+                <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:marketplace context:user" data-octo-click="marketplace_click" data-octo-dimensions="location:nav_bar" data-selected-links=" /marketplace" href="/marketplace">
+                   Marketplace
+</a>                  
+              </li>
+            <li>
+              <a class="js-selected-navigation-item HeaderNavlink px-2" data-ga-click="Header, click, Nav menu - item:explore" data-selected-links="/explore /trending /trending/developers /integrations /integrations/feature/code /integrations/feature/collaborate /integrations/feature/ship showcases showcases_search showcases_landing /explore" href="/explore">
+                Explore
+</a>            </li>
+          </ul>
+      </nav>
+
+      <div class="d-flex">
+        
+<ul class="user-nav d-flex flex-items-center list-style-none" id="user-links">
+  <li class="dropdown">
+    <span class="d-inline-block  px-2">
+      
+    <a aria-label="You have no unread notifications" class="notification-indicator tooltipped tooltipped-s  js-socket-channel js-notification-indicator" data-hotkey="g n" data-ga-click="Header, go to notifications, icon:read" data-channel="notification-changed:22202681" href="/notifications">
+        <span class="mail-status "></span>
+        <svg class="octicon octicon-bell" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 12v1H0v-1l.73-.58c.77-.77.81-2.55 1.19-4.42C2.69 3.23 6 2 6 2c0-.55.45-1 1-1s1 .45 1 1c0 0 3.39 1.23 4.16 5 .38 1.88.42 3.66 1.19 4.42l.66.58H14zm-7 4c1.11 0 2-.89 2-2H5c0 1.11.89 2 2 2z"/></svg>
+</a>
+    </span>
+  </li>
+
+  <li class="dropdown">
+    <details class="details-overlay details-reset d-flex px-2 flex-items-center">
+      <summary class="HeaderNavlink"
+         aria-label="Create new…"
+         data-ga-click="Header, create new, icon:add">
+        <svg class="octicon octicon-plus float-left mr-1 mt-1" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"/></svg>
+        <span class="dropdown-caret mt-1"></span>
+      </summary>
+      <details-menu class="dropdown-menu dropdown-menu-sw">
+        
+<a role="menuitem" class="dropdown-item" href="/new" data-ga-click="Header, create new repository">
+  New repository
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="/new/import" data-ga-click="Header, import a repository">
+    Import repository
+  </a>
+
+<a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, create new gist">
+  New gist
+</a>
+
+  <a role="menuitem" class="dropdown-item" href="/organizations/new" data-ga-click="Header, create new organization">
+    New organization
+  </a>
+
+
+  <div class="dropdown-divider"></div>
+  <div class="dropdown-header">
+    <span title="uxsolutions/bootstrap-datepicker">This repository</span>
+  </div>
+    <a role="menuitem" class="dropdown-item" href="/uxsolutions/bootstrap-datepicker/issues/new" data-ga-click="Header, create new issue">
+      New issue
+    </a>
+
+
+      </details-menu>
+    </details>
+  </li>
+
+  <li class="dropdown">
+
+    <details class="details-overlay details-reset d-flex pl-2 flex-items-center">
+      <summary class="HeaderNavlink name mt-1"
+        aria-label="View profile and more"
+        data-ga-click="Header, show menu, icon:avatar">
+        <img alt="@philblower" class="avatar float-left mr-1" src="https://avatars0.githubusercontent.com/u/22202681?s=40&amp;v=4" height="20" width="20">
+        <span class="dropdown-caret"></span>
+      </summary>
+      <details-menu class="dropdown-menu dropdown-menu-sw">
+        <div class="header-nav-current-user css-truncate"><a role="menuitem" class="no-underline user-profile-link px-3 pt-2 pb-2 mb-n2 mt-n1 d-block" href="/philblower" data-ga-click="Header, go to profile, text:Signed in as">Signed in as <strong class="css-truncate-target">philblower</strong></a></div>
+        <div role="none" class="dropdown-divider"></div>
+
+        <div class="px-3 f6 user-status-container js-user-status-context pb-1" data-url="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1">
+          
+<div class="js-user-status-container user-status-compact" data-team-hovercards-enabled>
+  <details class="js-user-status-details details-reset details-overlay details-overlay-dark">
+    <summary class="btn-link no-underline js-toggle-user-status-edit toggle-user-status-edit width-full" aria-haspopup="dialog" role="menuitem">
+      <div class="f6 d-inline-block v-align-middle  user-status-emoji-only-header pl-0 circle lh-condensed user-status-header " style="max-width: 29px">
+        <div class="user-status-emoji-container flex-shrink-0 mr-1">
+          <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm4.81 12.81a6.72 6.72 0 0 1-2.17 1.45c-.83.36-1.72.53-2.64.53-.92 0-1.81-.17-2.64-.53-.81-.34-1.55-.83-2.17-1.45a6.773 6.773 0 0 1-1.45-2.17A6.59 6.59 0 0 1 1.21 8c0-.92.17-1.81.53-2.64.34-.81.83-1.55 1.45-2.17.62-.62 1.36-1.11 2.17-1.45A6.59 6.59 0 0 1 8 1.21c.92 0 1.81.17 2.64.53.81.34 1.55.83 2.17 1.45.62.62 1.11 1.36 1.45 2.17.36.83.53 1.72.53 2.64 0 .92-.17 1.81-.53 2.64-.34.81-.83 1.55-1.45 2.17zM4 6.8v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2H5.2C4.53 8 4 7.47 4 6.8zm5 0v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2h-.59C9.53 8 9 7.47 9 6.8zm4 3.2c-.72 1.88-2.91 3-5 3s-4.28-1.13-5-3c-.14-.39.23-1 .66-1h8.59c.41 0 .89.61.75 1z"/></svg>
+        </div>
+      </div>
+      <div class="d-inline-block v-align-middle user-status-message-wrapper f6 lh-condensed ws-normal pt-1">
+          <span class="link-gray">Set your status</span>
+      </div>
+    </summary>
+    <details-dialog class="anim-fade-in fast Box Box--overlay" role="dialog" tabindex="-1">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="position-relative flex-auto js-user-status-form" action="/users/status?compact=1&amp;link_mentions=0&amp;truncate=1" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="authenticity_token" value="Ql9O2Z+p1pTnLNEM2oSbzS7eBt+xY1Tf0iQGKnIb1RUilQRD5N7JE/JmQSanUAemihGjWi9iCNLhSCmZDysckg==" />
+        <div class="Box-header">
+          <button class="Box-btn-octicon js-toggle-user-status-edit btn-octicon float-right" type="reset" aria-label="Close dialog" data-close-dialog>
+            <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+          </button>
+          <h3 class="Box-title text-gray-dark">Edit status</h3>
+        </div>
+        <input type="hidden" name="emoji" class="js-user-status-emoji-field" value="">
+        <input type="hidden" name="organization_id" class="js-user-status-org-id-field" value="">
+        <div class="px-3 py-2 text-gray-dark">
+          <div class="js-characters-remaining-container js-suggester-container position-relative mt-2">
+            <div class="input-group">
+              <span class="input-group-button">
+                <button type="button" aria-label="Choose an emoji" class="btn-outline btn js-toggle-user-status-emoji-picker">
+                  <span class="js-user-status-original-emoji" hidden></span>
+                  <span class="js-user-status-custom-emoji"></span>
+                  <span class="js-user-status-no-emoji-icon" >
+                    <svg class="octicon octicon-smiley" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm4.81 12.81a6.72 6.72 0 0 1-2.17 1.45c-.83.36-1.72.53-2.64.53-.92 0-1.81-.17-2.64-.53-.81-.34-1.55-.83-2.17-1.45a6.773 6.773 0 0 1-1.45-2.17A6.59 6.59 0 0 1 1.21 8c0-.92.17-1.81.53-2.64.34-.81.83-1.55 1.45-2.17.62-.62 1.36-1.11 2.17-1.45A6.59 6.59 0 0 1 8 1.21c.92 0 1.81.17 2.64.53.81.34 1.55.83 2.17 1.45.62.62 1.11 1.36 1.45 2.17.36.83.53 1.72.53 2.64 0 .92-.17 1.81-.53 2.64-.34.81-.83 1.55-1.45 2.17zM4 6.8v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2H5.2C4.53 8 4 7.47 4 6.8zm5 0v-.59c0-.66.53-1.19 1.2-1.19h.59c.66 0 1.19.53 1.19 1.19v.59c0 .67-.53 1.2-1.19 1.2h-.59C9.53 8 9 7.47 9 6.8zm4 3.2c-.72 1.88-2.91 3-5 3s-4.28-1.13-5-3c-.14-.39.23-1 .66-1h8.59c.41 0 .89.61.75 1z"/></svg>
+                  </span>
+                </button>
+              </span>
+              <input type="text" autocomplete="off" autofocus data-maxlength="80" class="js-suggester-field form-control js-user-status-message-field js-characters-remaining-field" placeholder="What's happening?" name="message" required value="" aria-label="What is your current status?">
+            </div>
+            <div class="suggester-container">
+              <div class="suggester js-suggester js-navigation-container" data-url="/autocomplete/user-suggestions" data-no-org-url="/autocomplete/user-suggestions" data-org-url="/suggestions" hidden>
+              </div>
+            </div>
+            <div style="margin-left: 53px" class="my-1 text-small label-characters-remaining js-characters-remaining" data-suffix="remaining" hidden>
+              80 remaining
+            </div>
+          </div>
+          <include-fragment class="js-user-status-emoji-picker" data-url="/users/status/emoji"></include-fragment>
+          <div class="overflow-auto" style="max-height: 33vh">
+            <div class="user-status-suggestions js-user-status-suggestions">
+              <h4 class="f6 text-normal my-3">Suggestions:</h4>
+              <div class="mx-3 mt-2 clearfix">
+                  <div class="float-left col-6">
+                      <button type="button" value=":palm_tree:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="palm_tree" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f334.png">🌴</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message" style="border-left: 1px solid transparent">
+                          On vacation
+                        </div>
+                      </button>
+                      <button type="button" value=":face_with_thermometer:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="face_with_thermometer" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f912.png">🤒</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message" style="border-left: 1px solid transparent">
+                          Out sick
+                        </div>
+                      </button>
+                  </div>
+                  <div class="float-left col-6">
+                      <button type="button" value=":house:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="house" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3e0.png">🏠</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message" style="border-left: 1px solid transparent">
+                          Working from home
+                        </div>
+                      </button>
+                      <button type="button" value=":dart:" class="d-flex flex-items-baseline flex-items-stretch lh-condensed f6 btn-link link-gray no-underline js-predefined-user-status mb-1">
+                        <div class="emoji-status-width mr-2 v-align-middle js-predefined-user-status-emoji">
+                          <g-emoji alias="dart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f3af.png">🎯</g-emoji>
+                        </div>
+                        <div class="d-flex flex-items-center no-underline js-predefined-user-status-message" style="border-left: 1px solid transparent">
+                          Focusing
+                        </div>
+                      </button>
+                  </div>
+              </div>
+            </div>
+            <div class="user-status-limited-availability-container">
+              <div class="form-checkbox my-0">
+                <input type="checkbox" name="limited_availability" value="1" class="js-user-status-limited-availability-checkbox" data-default-message="I may be slow to respond." aria-describedby="limited-availability-help-text-truncate-true" id="limited-availability-truncate-true">
+                <label class="d-block f5 text-gray-dark mb-1" for="limited-availability-truncate-true">
+                  Busy
+                </label>
+                <p class="note" id="limited-availability-help-text-truncate-true">
+                  When others mention you, assign you, or request your review,
+                  GitHub will let them know that you have limited availability.
+                </p>
+              </div>
+            </div>
+          </div>
+          <include-fragment class="js-user-status-org-picker" data-url="/users/status/organizations"></include-fragment>
+        </div>
+        <div class="d-flex flex-items-center flex-justify-between p-3 border-top">
+          <button type="submit" disabled class="width-full btn btn-primary mr-2 js-user-status-submit">
+            Set status
+          </button>
+          <button type="button" disabled class="width-full js-clear-user-status-button btn ml-2 ">
+            Clear status
+          </button>
+        </div>
+</form>    </details-dialog>
+  </details>
+
+</div>
+
+        </div>
+        <div role="none" class="dropdown-divider"></div>
+
+        <a role="menuitem" class="dropdown-item" href="/philblower" data-ga-click="Header, go to profile, text:your profile">Your profile</a>
+        <a role="menuitem" class="dropdown-item" href="/philblower?tab=repositories" data-ga-click="Header, go to repositories, text:your repositories">Your repositories</a>
+
+
+        <a role="menuitem" class="dropdown-item" href="/philblower?tab=stars" data-ga-click="Header, go to starred repos, text:your stars">Your stars</a>
+          <a role="menuitem" class="dropdown-item" href="https://gist.github.com/" data-ga-click="Header, your gists, text:your gists">Your gists</a>
+
+        <div role="none" class="dropdown-divider"></div>
+        <a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a>
+        <a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="+qSknZKTP3Ibu2MOIXEmFO23tLgbcvhbOPYYhtle9CZ/nJ0aveJMQtjMc4/CSBoGmX6jLj3E8cIWxbj0u7N6Fw==" />
+          
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
+            Sign out
+          </button>
+</form>      </details-menu>
+    </details>
+  </li>
+</ul>
+
+
+
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="vVl1yQcB5i/W41Uidimd5HcGb2UDreReSkOoL3XDzug4YUxOKHCVHxWURaOVEKH2A8948yUb7cdkcAhdFy5A2Q==" />
+          <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
+            Sign out
+          </button>
+</form>      </div>
+    </div>
+  </div>
+</header>
+
+      
+
+  </div>
+
+  <div id="start-of-content" class="show-on-focus"></div>
+
+    <div id="js-flash-container">
+
+</div>
+
+
+
+  <div role="main" class="application-main " data-commit-hovercards-enabled>
+        <div itemscope itemtype="http://schema.org/SoftwareSourceCode" class="">
+    <div id="js-repo-pjax-container" data-pjax-container >
+      
+
+
+  
+
+
+  
+
+
+
+
+  <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav  ">
+    <div class="repohead-details-container clearfix container">
+
+      <ul class="pagehead-actions">
+  <li>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="3T2i1F6az5u9y/CEzN6uBTf7cVWDdrr0esjWBjMKSIGWOlnoNBb7MMhL1/DGZzhXZUOWSB7QVNSKACvWccRjOQ==" />      <input type="hidden" name="repository_id" id="repository_id" value="3744545" class="form-control" />
+
+      <details class="details-reset details-overlay select-menu float-left">
+        <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
+          <span data-menu-button>
+              <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+              Watch
+          </span>
+        </summary>
+        <details-menu class="select-menu-modal position-absolute mt-5" style="z-index: 99;">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notifications</span>
+          </div>
+          <div class="select-menu-list">
+            <button type="submit" name="do" value="included" class="select-menu-item width-full" aria-checked="true" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Not watching</span>
+                <span class="description">Be notified only when participating or @mentioned.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Watch
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="release_only" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Releases only</span>
+                <span class="description">Be notified of new releases, and when participating or @mentioned.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Unwatch releases
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="subscribed" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Watching</span>
+                <span class="description">Be notified of all conversations.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg>
+                  Unwatch
+                </span>
+              </div>
+            </button>
+
+            <button type="submit" name="do" value="ignore" class="select-menu-item width-full" aria-checked="false" role="menuitemradio">
+              <svg class="octicon octicon-check select-menu-item-icon" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"/></svg>
+              <div class="select-menu-item-text">
+                <span class="select-menu-item-heading">Ignoring</span>
+                <span class="description">Never be notified.</span>
+                <span class="hidden-select-button-text" data-menu-button-contents>
+                  <svg class="octicon octicon-mute v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"/></svg>
+                  Stop ignoring
+                </span>
+              </div>
+            </button>
+          </div>
+        </details-menu>
+      </details>
+      <a class="social-count js-social-count"
+        href="/uxsolutions/bootstrap-datepicker/watchers"
+        aria-label="478 users are watching this repository">
+        478
+      </a>
+</form>
+  </li>
+
+  <li>
+      <div class="js-toggler-container js-social-container starring-container ">
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/uxsolutions/bootstrap-datepicker/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="oXEoziuPFMqrsfal7Cjg5VqkfezDviypvp3qH00rARH1TzylkPQwjTM6fo6ZKedN3N3U4/UHr+TuGnWoGn4EBg==" />
+      <input type="hidden" name="context" value="repository"></input>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Unstar this repository" title="Unstar uxsolutions/bootstrap-datepicker"
+        data-ga-click="Repository, click unstar button, action:blob#show; text:Unstar">
+        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+        Unstar
+      </button>
+        <a class="social-count js-social-count" href="/uxsolutions/bootstrap-datepicker/stargazers"
+           aria-label="11350 users starred this repository">
+          11,350
+        </a>
+</form>
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/uxsolutions/bootstrap-datepicker/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ROJbPoGzGLD/GBu2CI6sD7VFjx1en3TZwLXAvSNkVraMM4x1yYsFWkaRnczryNndObKNe3F+EwP46FHPwlLTXg==" />
+      <input type="hidden" name="context" value="repository"></input>
+      <button
+        type="submit"
+        class="btn btn-sm btn-with-count js-toggler-target"
+        aria-label="Star this repository" title="Star uxsolutions/bootstrap-datepicker"
+        data-ga-click="Repository, click star button, action:blob#show; text:Star">
+        <svg class="octicon octicon-star v-align-text-bottom" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"/></svg>
+        Star
+      </button>
+        <a class="social-count js-social-count" href="/uxsolutions/bootstrap-datepicker/stargazers"
+           aria-label="11350 users starred this repository">
+          11,350
+        </a>
+</form>  </div>
+
+  </li>
+
+  <li>
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/uxsolutions/bootstrap-datepicker/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="s9aDnfbAoPIRqdYjW4wWaZZVo1hS5NCB0/Ug4fFbFqS/KZ/3IbJqpfyRuXY0qXMZN9UrfaqB9Y7k6tHEW2C5NA==" />
+            <button
+                type="submit"
+                class="btn btn-sm btn-with-count"
+                data-ga-click="Repository, show fork modal, action:blob#show; text:Fork"
+                title="Fork your own copy of uxsolutions/bootstrap-datepicker to your account"
+                aria-label="Fork your own copy of uxsolutions/bootstrap-datepicker to your account">
+              <svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 0 0-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 0 0 2 1a1.993 1.993 0 0 0-1 3.72V6.5l3 3v1.78A1.993 1.993 0 0 0 5 15a1.993 1.993 0 0 0 1-3.72V9.5l3-3V4.72A1.993 1.993 0 0 0 8 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+              Fork
+            </button>
+</form>
+    <a href="/uxsolutions/bootstrap-datepicker/network/members" class="social-count"
+       aria-label="5191 users forked this repository">
+      5,191
+    </a>
+  </li>
+</ul>
+
+      <h1 class="public ">
+  <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"/></svg>
+  <span class="author" itemprop="author"><a class="url fn" rel="author" data-hovercard-type="organization" data-hovercard-url="/orgs/uxsolutions/hovercard" href="/uxsolutions">uxsolutions</a></span><!--
+--><span class="path-divider">/</span><!--
+--><strong itemprop="name"><a data-pjax="#js-repo-pjax-container" href="/uxsolutions/bootstrap-datepicker">bootstrap-datepicker</a></strong>
+
+</h1>
+
+    </div>
+    
+<nav class="reponav js-repo-nav js-sidenav-container-pjax container"
+     itemscope
+     itemtype="http://schema.org/BreadcrumbList"
+    aria-label="Repository"
+     data-pjax="#js-repo-pjax-container">
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a class="js-selected-navigation-item selected reponav-item" itemprop="url" data-hotkey="g c" aria-current="page" data-selected-links="repo_source repo_downloads repo_commits repo_releases repo_tags repo_branches repo_packages /uxsolutions/bootstrap-datepicker" href="/uxsolutions/bootstrap-datepicker">
+      <svg class="octicon octicon-code" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M9.5 3L8 4.5 11.5 8 8 11.5 9.5 13 14 8 9.5 3zm-5 0L0 8l4.5 5L6 11.5 2.5 8 6 4.5 4.5 3z"/></svg>
+      <span itemprop="name">Code</span>
+      <meta itemprop="position" content="1">
+</a>  </span>
+
+    <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+      <a itemprop="url" data-hotkey="g i" class="js-selected-navigation-item reponav-item" data-selected-links="repo_issues repo_labels repo_milestones /uxsolutions/bootstrap-datepicker/issues" href="/uxsolutions/bootstrap-datepicker/issues">
+        <svg class="octicon octicon-issue-opened" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"/></svg>
+        <span itemprop="name">Issues</span>
+        <span class="Counter">677</span>
+        <meta itemprop="position" content="2">
+</a>    </span>
+
+  <span itemscope itemtype="http://schema.org/ListItem" itemprop="itemListElement">
+    <a data-hotkey="g p" itemprop="url" class="js-selected-navigation-item reponav-item" data-selected-links="repo_pulls checks /uxsolutions/bootstrap-datepicker/pulls" href="/uxsolutions/bootstrap-datepicker/pulls">
+      <svg class="octicon octicon-git-pull-request" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0 0 10 15a1.993 1.993 0 0 0 1-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v6.56A1.993 1.993 0 0 0 2 15a1.993 1.993 0 0 0 1-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
+      <span itemprop="name">Pull requests</span>
+      <span class="Counter">89</span>
+      <meta itemprop="position" content="3">
+</a>  </span>
+
+
+    <a data-hotkey="g b" class="js-selected-navigation-item reponav-item" data-selected-links="repo_projects new_repo_project repo_project /uxsolutions/bootstrap-datepicker/projects" href="/uxsolutions/bootstrap-datepicker/projects">
+      <svg class="octicon octicon-project" viewBox="0 0 15 16" version="1.1" width="15" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 12h3V2h-3v10zm-4-2h3V2H6v8zm-4 4h3V2H2v12zm-1 1h13V1H1v14zM14 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
+      Projects
+      <span class="Counter" >1</span>
+</a>
+
+
+    <a class="js-selected-navigation-item reponav-item" data-selected-links="repo_graphs repo_contributors dependency_graph pulse alerts security /uxsolutions/bootstrap-datepicker/pulse" href="/uxsolutions/bootstrap-datepicker/pulse">
+      <svg class="octicon octicon-graph" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M16 14v1H0V0h1v14h15zM5 13H3V8h2v5zm4 0H7V3h2v10zm4 0h-2V6h2v7z"/></svg>
+      Insights
+</a>
+
+</nav>
+
+
+  </div>
+
+<div class="container new-discussion-timeline experiment-repo-nav  ">
+  <div class="repository-content ">
+
+    
+    
+
+
+
+  
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/uxsolutions/bootstrap-datepicker/blob/9252578f279ace3f624c064e7a239aeaae96f005/dist/css/bootstrap-datepicker3.standalone.css.map">Permalink</a>
+
+    <!-- blob contrib key: blob_contributors:v21:c905e3c85d394706c359bcd914a7894b -->
+
+    
+
+    <div class="file-navigation">
+      
+<div class="select-menu branch-select-menu js-menu-container js-select-menu float-left js-load-contents"
+  data-contents-url="/uxsolutions/bootstrap-datepicker/ref-list/master/dist/css/bootstrap-datepicker3.standalone.css.map?source_action=show&amp;source_controller=blob">
+  <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
+    
+    type="button" aria-label="Switch branches or tags" aria-expanded="false" aria-haspopup="true">
+    <i>Branch:</i>
+    <span class="js-select-button css-truncate-target">master</span>
+  </button>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+    <div class="select-menu-modal">
+      <div class="js-select-menu-deferred-content"></div>
+      <div class="select-menu-loading-overlay anim-pulse">
+        <svg height="32" class="octicon octicon-octoface" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M14.7 5.34c.13-.32.55-1.59-.13-3.31 0 0-1.05-.33-3.44 1.3-1-.28-2.07-.32-3.13-.32s-2.13.04-3.13.32c-2.39-1.64-3.44-1.3-3.44-1.3-.68 1.72-.26 2.99-.13 3.31C.49 6.21 0 7.33 0 8.69 0 13.84 3.33 15 7.98 15S16 13.84 16 8.69c0-1.36-.49-2.48-1.3-3.35zM8 14.02c-3.3 0-5.98-.15-5.98-3.35 0-.76.38-1.48 1.02-2.07 1.07-.98 2.9-.46 4.96-.46 2.07 0 3.88-.52 4.96.46.65.59 1.02 1.3 1.02 2.07 0 3.19-2.68 3.35-5.98 3.35zM5.49 9.01c-.66 0-1.2.8-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.54-1.78-1.2-1.78zm5.02 0c-.66 0-1.2.79-1.2 1.78s.54 1.79 1.2 1.79c.66 0 1.2-.8 1.2-1.79s-.53-1.78-1.2-1.78z"/></svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="BtnGroup float-right">
+        <a href="/uxsolutions/bootstrap-datepicker/find/master"
+              class="js-pjax-capture-input btn btn-sm BtnGroup-item"
+              data-pjax
+              data-hotkey="t">
+          Find file
+        </a>
+        <clipboard-copy for="blob-path" class="btn btn-sm BtnGroup-item">
+          Copy path
+        </clipboard-copy>
+      </div>
+      <div id="blob-path" class="breadcrumb">
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" href="/uxsolutions/bootstrap-datepicker"><span>bootstrap-datepicker</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/uxsolutions/bootstrap-datepicker/tree/master/dist"><span>dist</span></a></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" href="/uxsolutions/bootstrap-datepicker/tree/master/dist/css"><span>css</span></a></span><span class="separator">/</span><strong class="final-path">bootstrap-datepicker3.standalone.css.map</strong>
+      </div>
+    </div>
+
+
+    <include-fragment src="/uxsolutions/bootstrap-datepicker/contributors/master/dist/css/bootstrap-datepicker3.standalone.css.map" class="commit-tease commit-loader">
+      <div>
+        Fetching contributors&hellip;
+      </div>
+
+      <div class="commit-tease-contributors">
+          <img alt="" class="loader-loading float-left" src="https://github.githubassets.com/images/spinners/octocat-spinner-32-EAF2F5.gif" width="16" height="16" />
+        <span class="loader-error">Cannot retrieve contributors at this time</span>
+      </div>
+</include-fragment>
+
+
+
+    <div class="file ">
+      
+<div class="file-header">
+
+  <div class="file-actions">
+
+
+    <div class="BtnGroup">
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/uxsolutions/bootstrap-datepicker/raw/master/dist/css/bootstrap-datepicker3.standalone.css.map">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/uxsolutions/bootstrap-datepicker/blame/master/dist/css/bootstrap-datepicker3.standalone.css.map">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/uxsolutions/bootstrap-datepicker/commits/master/dist/css/bootstrap-datepicker3.standalone.css.map">History</a>
+    </div>
+
+        <a class="btn-octicon tooltipped tooltipped-nw"
+           href="github-mac://openRepo/https://github.com/uxsolutions/bootstrap-datepicker?branch=master&amp;filepath=dist%2Fcss%2Fbootstrap-datepicker3.standalone.css.map"
+           aria-label="Open this file in GitHub Desktop"
+           data-ga-click="Repository, open with desktop, type:mac">
+            <svg class="octicon octicon-device-desktop" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"/></svg>
+        </a>
+
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form js-update-url-with-hash" action="/uxsolutions/bootstrap-datepicker/edit/master/dist/css/bootstrap-datepicker3.standalone.css.map" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="INw/d8Cj1pplC4bYQBKmVdDaRkxWbgvZ3faeaWQ94bRKIpNvFMjupImGz6/oHjb+N3G9ITWpEk7G8VOWEkrzLA==" />
+            <button class="btn-octicon tooltipped tooltipped-nw" type="submit"
+              aria-label="Fork this project and edit the file" data-hotkey="e" data-disable-with>
+              <svg class="octicon octicon-pencil" viewBox="0 0 14 16" version="1.1" width="14" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M0 12v3h3l8-8-3-3-8 8zm3 2H1v-2h1v1h1v1zm10.3-9.3L12 6 9 3l1.3-1.3a.996.996 0 0 1 1.41 0l1.59 1.59c.39.39.39 1.02 0 1.41z"/></svg>
+            </button>
+</form>
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="inline-form" action="/uxsolutions/bootstrap-datepicker/delete/master/dist/css/bootstrap-datepicker3.standalone.css.map" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LXoK2MpSky6S4wAZqSQAdc+XNJ/5+iqhKOz5LddCYm7855rgxNDjBTH9BawRfDce/mHhobMUqrynrz2XVpNmNg==" />
+          <button class="btn-octicon btn-octicon-danger tooltipped tooltipped-nw" type="submit"
+            aria-label="Fork this project and delete the file" data-disable-with>
+            <svg class="octicon octicon-trashcan" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M11 2H9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1H2c-.55 0-1 .45-1 1v1c0 .55.45 1 1 1v9c0 .55.45 1 1 1h7c.55 0 1-.45 1-1V5c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm-1 12H3V5h1v8h1V5h1v8h1V5h1v8h1V5h1v9zm1-10H2V3h9v1z"/></svg>
+          </button>
+</form>  </div>
+
+  <div class="file-info">
+      1 lines (1 sloc)
+      <span class="file-info-divider"></span>
+    25.1 KB
+  </div>
+</div>
+
+      
+
+  <div itemprop="text" class="blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="2">
+      <tr>
+        <td id="L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="LC1" class="blob-code blob-code-inner js-file-line">{&quot;version&quot;:3,&quot;sources&quot;:[&quot;less/datepicker3.less&quot;,&quot;build/build3.less&quot;,&quot;build/build_standalone3.less&quot;],&quot;names&quot;:[],&quot;mappings&quot;:&quot;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&quot;,&quot;sourcesContent&quot;:[&quot;.datepicker {\n\tborder-radius: @border-radius-base;\n\t&amp;-inline {\n\t\twidth: 220px;\n\t}\n\tdirection: ltr;\n\t&amp;-rtl {\n\t\tdirection: rtl;\n\t\t&amp;.dropdown-menu { left: auto; }\n\t\ttable tr td span {\n\t\t\tfloat: right;\n\t\t}\n\t}\n\t&amp;-dropdown {\n\t\ttop: 0;\n\t\tleft: 0;\n\t\tpadding: 4px;\n\t\t&amp;:before {\n\t\t\tcontent: &#39;&#39;;\n\t\t\tdisplay: inline-block;\n\t\t\tborder-left:   7px solid transparent;\n\t\t\tborder-right:  7px solid transparent;\n\t\t\tborder-bottom: 7px solid @dropdown-border;\n\t\t\tborder-top:    0;\n\t\t\tborder-bottom-color: rgba(0,0,0,.2);\n\t\t\tposition: absolute;\n\t\t}\n\t\t&amp;:after {\n\t\t\tcontent: &#39;&#39;;\n\t\t\tdisplay: inline-block;\n\t\t\tborder-left:   6px solid transparent;\n\t\t\tborder-right:  6px solid transparent;\n\t\t\tborder-bottom: 6px solid @dropdown-bg;\n\t\t\tborder-top:    0;\n\t\t\tposition: absolute;\n\t\t}\n\t\t&amp;.datepicker-orient-left:before   { left: 6px; }\n\t\t&amp;.datepicker-orient-left:after    { left: 7px; }\n\t\t&amp;.datepicker-orient-right:before  { right: 6px; }\n\t\t&amp;.datepicker-orient-right:after   { right: 7px; }\n\t\t&amp;.datepicker-orient-bottom:before { top: -7px; }\n\t\t&amp;.datepicker-orient-bottom:after  { top: -6px; }\n\t\t&amp;.datepicker-orient-top:before {\n\t\t\tbottom: -7px;\n\t\t\tborder-bottom: 0;\n\t\t\tborder-top:    7px solid @dropdown-border;\n\t\t}\n\t\t&amp;.datepicker-orient-top:after {\n\t\t\tbottom: -6px;\n\t\t\tborder-bottom: 0;\n\t\t\tborder-top:    6px solid @dropdown-bg;\n\t\t}\n\t}\n\ttable {\n\t\tmargin: 0;\n\t\t-webkit-touch-callout: none;\n\t\t-webkit-user-select: none;\n\t\t-khtml-user-select: none;\n\t\t-moz-user-select: none;\n\t\t-ms-user-select: none;\n\t\tuser-select: none;\n\t\ttr {\n\t\t\ttd, th {\n\t\t\t\ttext-align: center;\n\t\t\t\twidth: 30px;\n\t\t\t\theight: 30px;\n\t\t\t\tborder-radius: 4px;\n\t\t\t\tborder: none;\n\t\t\t}\n\t\t}\n\t}\n\t// Inline display inside a table presents some problems with\n\t// border and background colors.\n\t.table-striped &amp; table tr {\n\t\ttd, th {\n\t\t\tbackground-color: transparent;\n\t\t}\n\t}\n\ttable tr td {\n\t\t&amp;.old,\n\t\t&amp;.new {\n\t\t\tcolor: @btn-link-disabled-color;\n\t\t}\n\t\t&amp;.day:hover,\n\t\t&amp;.focused {\n\t\t\tbackground: @gray-lighter;\n\t\t\tcursor: pointer;\n\t\t}\n\t\t&amp;.disabled,\n\t\t&amp;.disabled:hover {\n\t\t\tbackground: none;\n\t\t\tcolor: @btn-link-disabled-color;\n\t\t\tcursor: default;\n\t\t}\n\t\t&amp;.highlighted {\n\t\t\t@highlighted-bg: @state-info-bg;\n\t\t\t.button-variant(#000, @highlighted-bg, darken(@highlighted-bg, 20%));\n\t\t\tborder-radius: 0;\n\n\t\t\t&amp;.focused {\n\t\t\t\tbackground: darken(@highlighted-bg, 10%);\n\t\t\t}\n\n\t\t\t&amp;.disabled,\n\t\t\t&amp;.disabled:active {\n\t\t\t\tbackground: @highlighted-bg;\n\t\t\t\tcolor: @btn-link-disabled-color;\n\t\t\t}\n\t\t}\n\t\t&amp;.today {\n\t\t\t@today-bg: lighten(orange, 30%);\n\t\t\t.button-variant(#000, @today-bg, darken(@today-bg, 20%));\n\n\t\t\t&amp;.focused {\n\t\t\t\tbackground: darken(@today-bg, 10%);\n\t\t\t}\n\n\t\t\t&amp;.disabled,\n\t\t\t&amp;.disabled:active {\n\t\t\t\tbackground: @today-bg;\n\t\t\t\tcolor: @btn-link-disabled-color;\n\t\t\t}\n\t\t}\n\t\t&amp;.range {\n\t\t\t@range-bg: @gray-lighter;\n\t\t\t.button-variant(#000, @range-bg, darken(@range-bg, 20%));\n\t\t\tborder-radius: 0;\n\n\t\t\t&amp;.focused {\n\t\t\t\tbackground: darken(@range-bg, 10%);\n\t\t\t}\n\n\t\t\t&amp;.disabled,\n\t\t\t&amp;.disabled:active {\n\t\t\t\tbackground: @range-bg;\n\t\t\t\tcolor: @btn-link-disabled-color;\n\t\t\t}\n\t\t}\n\t\t&amp;.range.highlighted {\n\t\t\t@range-highlighted-bg: mix(@state-info-bg, @gray-lighter, 50%);\n\t\t\t.button-variant(#000, @range-highlighted-bg, darken(@range-highlighted-bg, 20%));\n\n\t\t\t&amp;.focused {\n\t\t\t\tbackground: darken(@range-highlighted-bg, 10%);\n\t\t\t}\n\n\t\t\t&amp;.disabled,\n\t\t\t&amp;.disabled:active {\n\t\t\t\tbackground: @range-highlighted-bg;\n\t\t\t\tcolor: @btn-link-disabled-color;\n\t\t\t}\n\t\t}\n\t\t&amp;.range.today {\n\t\t\t@range-today-bg: mix(orange, @gray-lighter, 50%);\n\t\t\t.button-variant(#000, @range-today-bg, darken(@range-today-bg, 20%));\n\n\t\t\t&amp;.disabled,\n\t\t\t&amp;.disabled:active {\n\t\t\t\tbackground: @range-today-bg;\n\t\t\t\tcolor: @btn-link-disabled-color;\n\t\t\t}\n\t\t}\n\t\t&amp;.selected,\n\t\t&amp;.selected.highlighted {\n\t\t\t.button-variant(#fff, @gray-light, @gray);\n\t\t\ttext-shadow: 0 -1px 0 rgba(0,0,0,.25);\n\t\t}\n\t\t&amp;.active,\n\t\t&amp;.active.highlighted {\n\t\t\t.button-variant(@btn-primary-color, @btn-primary-bg, @btn-primary-border);\n\t\t\ttext-shadow: 0 -1px 0 rgba(0,0,0,.25);\n\t\t}\n\t\tspan {\n\t\t\tdisplay: block;\n\t\t\twidth: 23%;\n\t\t\theight: 54px;\n\t\t\tline-height: 54px;\n\t\t\tfloat: left;\n\t\t\tmargin: 1%;\n\t\t\tcursor: pointer;\n\t\t\tborder-radius: 4px;\n\t\t\t&amp;:hover,\n\t\t\t&amp;.focused {\n\t\t\t\tbackground: @gray-lighter;\n\t\t\t}\n\t\t\t&amp;.disabled,\n\t\t\t&amp;.disabled:hover {\n\t\t\t\tbackground: none;\n\t\t\t\tcolor: @btn-link-disabled-color;\n\t\t\t\tcursor: default;\n\t\t\t}\n\t\t\t&amp;.active,\n\t\t\t&amp;.active:hover,\n\t\t\t&amp;.active.disabled,\n\t\t\t&amp;.active.disabled:hover {\n\t\t\t\t.button-variant(@btn-primary-color, @btn-primary-bg, @btn-primary-border);\n\t\t\t\ttext-shadow: 0 -1px 0 rgba(0,0,0,.25);\n\t\t\t}\n\t\t\t&amp;.old,\n\t\t\t&amp;.new {\n\t\t\t\tcolor: @btn-link-disabled-color;\n\t\t\t}\n\t\t}\n\t}\n\n\t.datepicker-switch {\n\t\twidth: 145px;\n\t}\n\n\t.datepicker-switch,\n\t.prev,\n\t.next,\n\ttfoot tr th {\n\t\tcursor: pointer;\n\t\t&amp;:hover {\n\t\t\tbackground: @gray-lighter;\n\t\t}\n\t}\n\n\t.prev, .next {\n\t\t&amp;.disabled {\n\t\t\tvisibility: hidden;\n\t\t}\n\t}\n\n\t// Basic styling for calendar-week cells\n\t.cw {\n\t\tfont-size: 10px;\n\t\twidth: 12px;\n\t\tpadding: 0 2px 0 5px;\n\t\tvertical-align: middle;\n\t}\n}\n.input-group.date .input-group-addon {\n\tcursor: pointer;\n}\n.input-daterange {\n\twidth: 100%;\n\tinput {\n\t\ttext-align: center;\n\t}\n\tinput:first-child {\n\t\tborder-radius: 3px 0 0 3px;\n\t}\n\tinput:last-child {\n\t\tborder-radius: 0 3px 3px 0;\n\t}\n\t.input-group-addon {\n\t\twidth: auto;\n\t\tmin-width: 16px;\n\t\tpadding: 4px 5px;\n\t\tline-height: @line-height-base;\n\t\tborder-width: 1px 0;\n\t\tmargin-left: -5px;\n\t\tmargin-right: -5px;\n\t}\n}\n&quot;,&quot;// Datepicker .less buildfile.  Includes select mixins/variables from bootstrap\n// and imports the included datepicker.less to output a minimal datepicker.css\n//\n// Usage:\n//     lessc build3.less datepicker.css\n//\n// Variables and mixins copied from Bootstrap 3.3.5\n\n// Variables\n@gray:                   lighten(#000, 33.5%); // #555\n@gray-light:             lighten(#000, 46.7%); // #777\n@gray-lighter:           lighten(#000, 93.5%); // #eee\n\n@brand-primary:         darken(#428bca, 6.5%); // #337ab7\n\n@btn-primary-color:              #fff;\n@btn-primary-bg:                 @brand-primary;\n@btn-primary-border:             darken(@btn-primary-bg, 5%);\n\n@btn-link-disabled-color:        @gray-light;\n\n@state-info-bg:           #d9edf7;\n\n@line-height-base:        1.428571429; // 20/14\n@border-radius-base:      4px;\n\n@dropdown-bg:                   #fff;\n@dropdown-border:               rgba(0,0,0,.15);\n\n\n// Mixins\n\n// Button variants\n.button-variant(@color; @background; @border) {\n  color: @color;\n  background-color: @background;\n  border-color: @border;\n\n  &amp;:focus,\n  &amp;.focus {\n    color: @color;\n    background-color: darken(@background, 10%);\n        border-color: darken(@border, 25%);\n  }\n  &amp;:hover {\n    color: @color;\n    background-color: darken(@background, 10%);\n        border-color: darken(@border, 12%);\n  }\n  &amp;:active,\n  &amp;.active {\n    color: @color;\n    background-color: darken(@background, 10%);\n        border-color: darken(@border, 12%);\n\n    &amp;:hover,\n    &amp;:focus,\n    &amp;.focus {\n      color: @color;\n      background-color: darken(@background, 17%);\n          border-color: darken(@border, 25%);\n    }\n  }\n  &amp;.disabled,\n  &amp;[disabled],\n  fieldset[disabled] &amp; {\n    &amp;:hover,\n    &amp;:focus,\n    &amp;.focus {\n      background-color: @background;\n          border-color: @border;\n    }\n  }\n}\n\n@import \&quot;../less/datepicker3.less\&quot;;\n&quot;,&quot;// Datepicker standalone .less buildfile.  Includes all necessary mixins/variables/rules from bootstrap\n// and imports the included datepicker.less to output a minimal standalone datepicker.css\n//\n// Usage:\n//     lessc build_standalone3.less datepicker.css\n//\n// Variables, mixins, and rules copied from Bootstrap 3.3.5\n\n@import \&quot;build3.less\&quot;;\n\n// Dropdown css\n\n@zindex-dropdown:               1000;\n@dropdown-fallback-border:      #ccc;\n\n// Drop shadows\n.box-shadow(@shadow) {\n  -webkit-box-shadow: @shadow;\n     -moz-box-shadow: @shadow;\n          box-shadow: @shadow;\n}\n\n// The dropdown menu (ul)\n// ----------------------\n.datepicker {\n  &amp;.dropdown-menu {\n    position: absolute;\n    top: 100%;\n    left: 0;\n    z-index: @zindex-dropdown;\n    display: none; // none by default, but block on \&quot;open\&quot; of the menu\n    float: left;\n    min-width: 160px;\n    list-style: none;\n    background-color: @dropdown-bg;\n    border: 1px solid @dropdown-fallback-border; // IE8 fallback\n    border: 1px solid @dropdown-border;\n    border-radius: @border-radius-base;\n    .box-shadow(0 6px 12px rgba(0,0,0,.175));\n    -webkit-background-clip: padding-box;\n       -moz-background-clip: padding;\n            background-clip: padding-box;\n\n    // Normally inherited from bootstrap&#39;s `body`\n    color: #333333;\n    font-size: 13px;\n    line-height: @line-height-base;\n  }\n\n  &amp;.dropdown-menu, &amp;.datepicker-inline {\n    th, td {\n      padding: 0px 5px;\n    }\n  }\n}\n&quot;]}</td>
+      </tr>
+</table>
+
+  <details class="details-reset details-overlay BlobToolbar position-absolute js-file-line-actions dropdown d-none" aria-hidden="true">
+    <summary class="btn-octicon ml-0 px-2 p-0 bg-white border border-gray-dark rounded-1" aria-label="Inline file action toolbar">
+      <svg class="octicon octicon-kebab-horizontal" viewBox="0 0 13 16" version="1.1" width="13" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M1.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM13 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/></svg>
+    </summary>
+    <details-menu>
+      <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
+        <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/uxsolutions/bootstrap-datepicker/blame/9252578f279ace3f624c064e7a239aeaae96f005/dist/css/bootstrap-datepicker3.standalone.css.map">View git blame</a></li>
+          <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/uxsolutions/bootstrap-datepicker/issues/new">Open new issue</a></li>
+      </ul>
+    </details-menu>
+  </details>
+
+  </div>
+
+    </div>
+
+  
+
+  <details class="details-reset details-overlay details-overlay-dark">
+    <summary data-hotkey="l" aria-label="Jump to line"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast linejump" aria-label="Jump to line">
+      <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="js-jump-to-line-form Box-body d-flex" action="" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+        <input class="form-control flex-auto mr-3 linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" aria-label="Jump to line" autofocus>
+        <button type="submit" class="btn" data-close-dialog>Go</button>
+</form>    </details-dialog>
+  </details>
+
+
+
+  </div>
+  <div class="modal-backdrop js-touch-events"></div>
+</div>
+
+    </div>
+  </div>
+
+  </div>
+
+        
+<div class="footer container-lg px-3" role="contentinfo">
+  <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <ul class="list-style-none d-flex flex-wrap ">
+      <li class="mr-3">&copy; 2019 <span title="0.34550s from unicorn-db7dffcd6-r5bdn">GitHub</span>, Inc.</li>
+        <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
+        <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
+        <li class="mr-3"><a href="/security" data-ga-click="Footer, go to security, text:security">Security</a></li>
+        <li class="mr-3"><a href="https://githubstatus.com/" data-ga-click="Footer, go to status, text:status">Status</a></li>
+        <li><a data-ga-click="Footer, go to help, text:help" href="https://help.github.com">Help</a></li>
+    </ul>
+
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon mr-lg-4" href="https://github.com">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+</a>
+   <ul class="list-style-none d-flex flex-wrap ">
+        <li class="mr-3"><a data-ga-click="Footer, go to contact, text:contact" href="https://github.com/contact">Contact GitHub</a></li>
+        <li class="mr-3"><a href="https://github.com/pricing" data-ga-click="Footer, go to Pricing, text:Pricing">Pricing</a></li>
+      <li class="mr-3"><a href="https://developer.github.com" data-ga-click="Footer, go to api, text:api">API</a></li>
+      <li class="mr-3"><a href="https://training.github.com" data-ga-click="Footer, go to training, text:training">Training</a></li>
+        <li class="mr-3"><a href="https://blog.github.com" data-ga-click="Footer, go to blog, text:blog">Blog</a></li>
+        <li><a data-ga-click="Footer, go to about, text:about" href="https://github.com/about">About</a></li>
+
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+</div>
+
+
+
+  <div id="ajax-error-message" class="ajax-error-message flash flash-error">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <button type="button" class="flash-close js-ajax-error-dismiss" aria-label="Dismiss error">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+    You can’t perform that action at this time.
+  </div>
+
+
+    
+    <script crossorigin="anonymous" integrity="sha512-dHmPQivMlASgpXpwWHCs+zWS5+cYN3uvZwUlVzDP8/rlIEY6w7OyfwtMd9hC7xX0smxqhAHM0z4lVdddSZXzEw==" type="application/javascript" src="https://github.githubassets.com/assets/frameworks-b017eef8922fe066cbe4f9340ae4088c.js"></script>
+    
+    <script crossorigin="anonymous" async="async" integrity="sha512-CcMqoN2hkTjBgbEKAm8KJ3CdZXJotqOWAlozico4HCc0Y9OLGHzw/zQ/QbesJn/h8mEKa6fbvr1dQXvLoEzcFQ==" type="application/javascript" src="https://github.githubassets.com/assets/github-a667e95f746c6ae73169f44bfe3db5fe.js"></script>
+    
+    
+    
+  <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
+    <svg class="octicon octicon-alert" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"/></svg>
+    <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
+    <span class="signed-out-tab-flash">You signed out in another tab or window. <a href="">Reload</a> to refresh your session.</span>
+  </div>
+  <div class="facebox" id="facebox" style="display:none;">
+  <div class="facebox-popup">
+    <div class="facebox-content" role="dialog" aria-labelledby="facebox-header" aria-describedby="facebox-description">
+    </div>
+    <button type="button" class="facebox-close js-facebox-close" aria-label="Close modal">
+      <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+    </button>
+  </div>
+</div>
+
+  <template id="site-details-dialog">
+  <details class="details-reset details-overlay details-overlay-dark lh-default text-gray-dark" open>
+    <summary aria-haspopup="dialog" aria-label="Close dialog"></summary>
+    <details-dialog class="Box Box--overlay d-flex flex-column anim-fade-in fast">
+      <button class="Box-btn-octicon m-0 btn-octicon position-absolute right-0 top-0" type="button" aria-label="Close dialog" data-close-dialog>
+        <svg class="octicon octicon-x" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M7.48 8l3.75 3.75-1.48 1.48L6 9.48l-3.75 3.75-1.48-1.48L4.52 8 .77 4.25l1.48-1.48L6 6.52l3.75-3.75 1.48 1.48L7.48 8z"/></svg>
+      </button>
+      <div class="octocat-spinner my-6 js-details-dialog-spinner"></div>
+    </details-dialog>
+  </details>
+</template>
+
+  <div class="Popover js-hovercard-content position-absolute" style="display: none; outline: none;" tabindex="0">
+  <div class="Popover-message Popover-message--bottom-left Popover-message--large Box box-shadow-large" style="width:360px;">
+  </div>
+</div>
+
+<div id="hovercard-aria-description" class="sr-only">
+  Press h to open a hovercard with more details.
+</div>
+
+  <div aria-live="polite" class="js-global-screen-reader-notice sr-only"></div>
+
+  </body>
+</html>
+
