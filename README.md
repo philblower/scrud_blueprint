@@ -42,7 +42,7 @@ The app contains a dashboard blueprint that is empty.  This is included only as 
 ## Example : Add table 'pet' to models_pab.py
 See notes at top of models_pab.py for detailed descriptions of the dt_column_spec and form_spec dictionaries.
 
-Start by checking out tag v0.1.0 from github.  This is the version without the 'pet' table.
+Start by checking out tag v0.1.0 from github.  This is the version without the 'pet' table.  Check out v0.1.0a for a version with the 'pet' table already included.
 
 Add a table named 'pet' to the database.  It will have columns for name, animal, owner, weight (lbs), weight (kg), weight (st).  The owner will be a link to a person from the user table.  This will demonstrate using a foreign key and SQLAlchemy relationship.  The weight (kg) and weight (st) columns provide a simple case to show how to enter columns whose values are calculated (not entered from a form).
 

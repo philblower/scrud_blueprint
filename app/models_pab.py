@@ -380,6 +380,7 @@ class User(db.Model, All_mixin):
         nullable=False
     )
     posts = relationship("Post", back_populates="user", lazy="select")
+    pets = relationship("Pet", back_populates="owner", lazy="select")
 
     dt_column_spec = OrderedDict([
         ("name",
@@ -387,7 +388,9 @@ class User(db.Model, All_mixin):
         ("email",
             {"label":"Email"}),
         ("posts",
-            {"label":"Posts"})
+            {"label":"Posts"}),
+        ("pets",
+            {"label":"Pets"})
     ])
 
     form_spec = OrderedDict([
@@ -447,3 +450,90 @@ class Post(db.Model, All_mixin):
         #     "type": "datetime-local"}
         # )
     ])
+
+class Pet(db.Model, All_mixin):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(
+        db.String(255),
+        nullable=False
+    )
+    animal = db.Column(
+        db.String(255),
+        nullable=False
+    )
+    owner_id =  db.Column(db.Integer, ForeignKey("user.id", ondelete="SET NULL", onupdate="CASCADE"))
+    owner = relationship("User", back_populates="pets", uselist=True)
+    weight_lb = db.Column(
+        db.Numeric(precision=5, asdecimal=False)
+    )
+    weight_kg = db.Column(
+        db.Numeric(precision=5, asdecimal=False)
+    )
+    weight_st = db.Column(
+        db.Numeric(precision=5, asdecimal=False)
+    )
+
+    dt_column_spec = OrderedDict([
+        ("name",
+            {"label":"Name"}
+        ),
+        ("animal",
+            {"label":"Animal"}
+        ),
+        ("owner",
+            {"label":"Owner",
+             "link":True}
+        ),
+        ("weight_lb",
+            {"label":"Weight (lbs)"}
+        ),
+        ("weight_kg",
+            {"label":"Weight (kg)"}
+        ),
+        ("weight_st",
+            {"label":"Weight (st)"}
+        )
+    ])
+
+    form_spec = OrderedDict([
+        ("name",
+            {"label":"Name",
+            "placeholder": "name",
+            "value":"",
+            "type": "text",
+            "validate": "required"}
+        ),
+        ("animal",
+            {"label":"Animal",
+            "placeholder": "dog",
+            "value":"",
+            "type": "text",
+            "validate": "required"}
+        ),
+        ("owner",
+            {"label":"Owner",
+            "value":"",
+            "type": "dropdown",
+            "validate": "required"}
+        ),
+        ("weight_lb",
+            {"label":"Weight (lbs)",
+            "placeholder": "35",
+            "value":"",
+            "type": "number"}
+        )
+    ])
+
+    def __str__(self):
+        return self.name
+
+    def set_computed_columns(self):
+        self.compute_weight_kg()
+        self.compute_weight_st()
+        super(Pet, self).set_computed_columns()
+
+    def compute_weight_kg(self):
+        self.weight_kg = self.weight_lb / 2.205
+
+    def compute_weight_st(self):
+        self.weight_st = self.weight_lb / 14.0

@@ -53,3 +53,7 @@ class PostForm(ModelForm):
         model = Post
     # reformat datetime to match html5 datetime-local format
     created_on = DateTimeField(format="%Y-%m-%dT%H:%M")
+
+class PetForm(ModelForm):
+    class Meta:
+        model = Pet

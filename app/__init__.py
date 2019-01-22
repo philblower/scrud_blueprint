@@ -2,7 +2,7 @@
     SCRUD Blueprint for Flask
 """
 
-__version__ = "0.1.0"
+__version__ = "0.1.0a"
 
 import os
 import sys
