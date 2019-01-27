@@ -1,154 +1,4 @@
-html {
-  font-size: 14px;
-  overflow-y: scroll;
-  overflow-x: auto;
-}
-body {
-  background-color: #ddd;
-  font-family: 'Oxygen', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  text-align: left;
-  color: #666;
-}
-
-/* General -------------------------------------------------------------------------------------- */
-* {
-  padding: 0;
-  border: 0;
-  outline: 0;
-  margin: 0;
-}
-
-h1, h2 {
-  font-weight: normal;
-  font-size: 1rem;
-}
-
-a {
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease 0s;
-  -moz-transition:    all 0.2s ease 0s;
-  -o-transition:      all 0.2s ease 0s;
-  transition:         all 0.2s ease 0s;
-}
-
-ul {
-  list-style-type: none;
-}
-
-table {
-  border-collapse: collapse;
-}
-table th,
-table td {
-  font-weight: normal;
-  text-align: left;
-  vertical-align: middle;
-}
-
-label {
-  cursor: pointer;
-}
-input,
-button,
-select {
-  background-color: transparent;
-  font-family: 'Oxygen', Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  color: #666;
-}
-button,
-select {
-  cursor: pointer;
-}
-button {
-  -webkit-transition: all 0.2s ease 0s;
-  -moz-transition:    all 0.2s ease 0s;
-  -o-transition:      all 0.2s ease 0s;
-  transition:         all 0.2s ease 0s;
-}
-select {
-  -webkit-appearance: none;
-}
-
-input[type=text],
-input[type=number],
-input[type=email],
-input[type=url],
-input[type=password],
-input[type=date],
-input[type=search],
-input[type=tel] {
-  -webkit-appearance: none;
-}
-input[type=number] {
-  -moz-appearance: textfield;
-}
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-}
-
-input[type=search] {
-  -webkit-appearance: none;
-  -webkit-border-radius: 0;
-}
-input[type=search]::-webkit-search-decoration,
-input[type=search]::-webkit-search-cancel-button,
-input[type=search]::-webkit-search-results-button,
-input[type=search]::-webkit-search-results-decoration {
-  display: none;
-}
-
-button::-moz-focus-inner,
-input[type="button"]::-moz-focus-inner,
-input[type="submit"]::-moz-focus-inner,
-input[type="reset"]::-moz-focus-inner {
-  padding: 0 !important;
-  border: 0 none !important;
-}
-
-/* Page container ------------------------------------------------------------------------------- */
-#page_container {
-  width: 980px;
-  padding: 100px 5px 55px 5px;
-  margin: 0 auto 0 auto;
-}
-
-/* Header --------------------------------------------------------------------------------------- */
-h1 {
-  font-weight: 700;
-  font-size: 2.2rem;
-  color: #f70;
-  margin: 0 0 25px 0;
-}
-
-button.button {
-  height: 35px;
-  display: inline-block;
-  background-color: #999;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-  padding: 0 15px 0 15px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius:    6px;
-  border-radius:         6px;
-  margin: 0 0 25px 0;
-}
-button.button:hover,
-button.button:active {
-  background-color: #333;
-}
-
-/* Datatable ------------------------------------------------------------------------------------ */
-.dataTables_wrapper {
-  position: relative;
-  padding: 50px 0 50px 0;
-}
-
+/* Datatable --------------------------------------------------------------- */
 .dataTables_length {
   width: auto;
   height: 30px;
@@ -202,174 +52,59 @@ button.button:active {
   display: none;
 }
 
-.dataTables_filter {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.dataTables_filter label {
-  line-height: 30px;
-}
-.dataTables_filter input {
-  width: 200px;
-  height: 30px;
-  display: inline-block;
-  background-color: #fff;
-  line-height: 30px;
-  color: #666;
-  padding: 0 0 0 10px;
-  border: 1px solid #ccc;
-  -webkit-border-radius: 6px;
-  -moz-border-radius:    6px;
-  border-radius:         6px;
-  margin: 0 0 0 10px;
-}
-.dataTables_filter input:focus {
-  background-color: #ffd;
-}
-
-.dataTables_paginate {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.dataTables_paginate a {
-  width: 30px;
-  height: 30px;
-  float: left;
-  background-color: #999;
-  font-weight: normal;
-  line-height: 29px;
-  text-align: center;
-  color: #fff;
-  -webkit-border-radius: 6px;
-  -moz-border-radius:    6px;
-  border-radius:         6px;
-  margin: 0 10px 0 0;
-}
-.dataTables_paginate a.current,
-.dataTables_paginate a:hover,
-.dataTables_paginate a:active,
-.dataTables_paginate a:focus {
-  background-color: #333;
-}
-.dataTables_paginate a.previous,
-.dataTables_paginate a.next {
-  font-family: 'FontAwesome', Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
-  line-height: 30px;
-}
-.dataTables_paginate a.previous:before {
-  content: '\f104';
-}
-.dataTables_paginate a.next:before {
-  content: '\f105';
-}
-
-.dataTables_info {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  line-height: 30px;
-}
-
-table.datatable {
-  width: 100% !important;
-  line-height: 1.4rem;
-}
-table.datatable th,
-table.datatable td {
-  background-color: #fff;
-  padding: 5px 10px 5px 10px;
-  border: 1px solid #ccc;
-}
-
-table.datatable thead th {
-  background-color: #999;
-  font-weight: bold;
-  text-transform: uppercase;
-  white-space: nowrap;
-  color: #fff;
-  padding-top: 7px;
-  padding-bottom: 8px;
-}
-table.datatable thead th.sorting,
-table.datatable thead th.sorting_desc,
-table.datatable thead th.sorting_asc {
-  cursor: pointer;
-}
-table.datatable thead th.sorting:active,
-table.datatable thead th.sorting_desc:active,
-table.datatable thead th.sorting_asc:active {
-  background-color: #333;
-}
-
-table.datatable tbody tr:nth-child(even) td {
-  background-color: #eee;
-}
-table.datatable tbody tr:hover th,
-table.datatable tbody tr:hover td {
-  background-color: #ffd;
-}
-table.datatable tbody tr:hover td.dataTables_empty {
-  background-color: #fff;
-}
-table.datatable tbody td.company_name {
-  width: 100%;
-}
-table.datatable tbody td.integer {
-  text-align: right;
-  white-space: nowrap;
-}
-table.datatable tbody td.nowrap {
-  white-space: nowrap;
-}
-
-table.datatable tbody td.functions .function_buttons {
-  width: 70px;
-  height: 30px;
-  margin: 0 auto 0 auto;
-}
-table.datatable tbody td.functions .function_buttons li {
-  float: left;
-  padding: 0 10px 0 0;
-}
-table.datatable tbody td.functions .function_buttons li.function_delete {
-  padding: 0;
-}
-table.datatable tbody td.functions .function_buttons a {
-  width: 30px;
-  height: 30px;
-  display: inline-block;
-  background-color: #999;
-  font-family: 'FontAwesome', Arial, Helvetica, sans-serif;
-  font-weight: normal;
-  line-height: 29px;
-  text-align: center;
-  color: #fff;
-  -webkit-border-radius: 6px;
-  -moz-border-radius:    6px;
-  border-radius:         6px;
-}
-table.datatable tbody td.functions .function_buttons .function_update a:before {
+.function_update a:before {
   font-size: 1.1rem;
   content: "\f040";
 }
-table.datatable tbody td.functions .function_buttons .function_delete a:before {
+.function_delete a:before {
   font-size: 1.2rem;
   line-height: 30px;
   content: "\f1f8";
 }
-table.datatable tbody td.functions .function_buttons a:hover,
-table.datatable tbody td.functions .function_buttons a:active,
-table.datatable tbody td.functions .function_buttons a:focus {
+.function_buttons {
+  width: 70px;
+  height: 30px;
+  margin: 0 auto 0 auto;
+}
+function_buttons li {
+  float: left;
+  padding: 0 10px 0 0;
+}
+.function_buttons li.function_delete {
+  padding: 0;
+}
+.function_buttons a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background-color: #999;
+  font-family: 'FontAwesome', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 29px;
+  text-align: center;
+  color: #fff;
+  -webkit-border-radius: 6px;
+  -moz-border-radius:    6px;
+  border-radius:         6px;
+}
+.function_buttons .function_update a:before {
+  font-size: 1.1rem;
+  content: "\f040";
+}
+.function_buttons .function_delete a:before {
+  font-size: 1.2rem;
+  line-height: 30px;
+  content: "\f1f8";
+}
+.function_buttons a:hover,
+.function_buttons a:active,
+.function_buttons a:focus {
   background-color: #333;
 }
-table.datatable tbody td.functions .function_buttons span {
+.function_buttons span {
   display: none;
 }
-
-/* Message / noscript --------------------------------------------------------------------------- */
+/* Message / noscript ------------------------------------------------------- */
 #message_container,
 #noscript_container {
   position: fixed;
@@ -423,8 +158,7 @@ table.datatable tbody td.functions .function_buttons span {
   content: '\f00d';
 }
 
-/* The Modal (background) PAB */
-/* Modal Content */
+/* The Modal (background) PAB ----------------------------------------------*/
 .modal-header, h4, .close {
     background-color: #5cb85c;
     color:white !important;
@@ -432,6 +166,5 @@ table.datatable tbody td.functions .function_buttons span {
     font-size: 30px;
 }
 .modal-footer {
-    background-color: #f9f9f9; /* #f9f9f9 */
+    background-color: #f9f9f9;
 }
-/*end modal styles*/

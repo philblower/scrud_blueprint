@@ -2,7 +2,7 @@
     SCRUD Blueprint for Flask
 """
 
-__version__ = "0.1.0a"
+__version__ = "0.1.1a"
 
 import os
 import sys
@@ -10,6 +10,7 @@ import sys
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
+from flask_bootstrap import WebCDN
 from flask_migrate import Migrate
 from config import conf
 
@@ -24,7 +25,12 @@ def create_app(test_config=None):
     app = Flask(__name__)
     app.config.from_object(conf)
     conf.init_app(app) # init_app is currently empty, this is a placeholder
+
     bootstrap.init_app(app)
+    # use jquery 3.3.1 instead of 1.10
+    app.extensions['bootstrap']['cdns']['jquery'] = WebCDN(
+    '//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/')
+
     db.init_app(app)
     migrate.init_app(app, db)
 

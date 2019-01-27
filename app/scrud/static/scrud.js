@@ -26,7 +26,7 @@ $(document).ready(function(){
     // Cancel modal form
     // The .off() function deregisters the ajax call
     // without this, two ajax calls would go out in sequence if
-    // I canceled the modal and then createed another record.
+    // I canceled the modal and then created another record.
     $("#my_modal_cancel").click(function(){
         $('#modalSubmit').off('click');
     });

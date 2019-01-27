@@ -245,16 +245,10 @@ class Company(db.Model, All_mixin):
     # and set_computed_columns() must call a function for each column to compute the value for that column
     def set_computed_columns(self):
         self.compute_rev_per_employee()
+        super(Company, self).set_computed_columns()
 
     def compute_rev_per_employee(self):
         self.rev_per_employee = 1.0e9 * self.revenue / self.num_employees
-        try:
-            db.session.commit()
-        except:
-            db.session.rollback()
-            raise
-        finally:
-            db.session.close()
 
     dt_column_spec = OrderedDict([
         ("rank",
@@ -264,7 +258,7 @@ class Company(db.Model, All_mixin):
         ("industries",
             {"label": "Industry"}),
         ("revenue",
-            {"label": "Revenue"}),
+            {"label": "Revenue ($B)"}),
         ("fiscal_year",
             {"label": "Fiscal Year"}),
         ("num_employees",

@@ -70,7 +70,7 @@ class SetFormInputHTML():
         html += '<div class="col-sm-8">'
         # a dropdown is the same for update or create modal
         ddl = self.get_dropdown_list() # drop down list
-        if self.form_type == 'update': # get default value 'selected' for dropdown
+        if self.form_type == "update": # get default value "selected" for dropdown
             # record.column_name returns a model class in a list
             selected_id = getattr(self.record, self.column_name)[0].id
         else:

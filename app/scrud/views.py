@@ -230,7 +230,7 @@ def get_form():
 @bp.route("/update_db", methods=["GET", "POST"])
 def update_db():
 
-    """ create or update record in database table to values from form.
+    """ Create or update record in database table to values from form.
     If "id" = None then create record, else update record
 
     Parameters
@@ -281,7 +281,8 @@ def update_db():
         except:
             db.session.rollback()
             result = "error"
-            message = "Failed to add or update record"
+            message = "Failed to create or update record"
+            raise
         finally:
             db.session.close()
 
