@@ -30,7 +30,7 @@ def create_app(test_config=None):
     # use jquery 3.3.1 instead of 1.10
     app.extensions['bootstrap']['cdns']['jquery'] = WebCDN(
     '//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/')
-
+    
     db.init_app(app)
     migrate.init_app(app, db)
 

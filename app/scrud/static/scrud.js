@@ -124,6 +124,17 @@ $(document).ready(function(){
         // The response is passed to the function
         .done(function(json) {
           if (json.result == 'success'){
+
+              // if the dt column has a render function, then convert the render str
+              // into its equivalent dt render function.
+              // should I be using eval() or is it dangerous in this case?
+              var i;
+              for (i = 0; i < json.columns.length; i++) {
+                  if ("render" in json.columns[i]) {
+                      json.columns[i].render = eval(json.columns[i].render)
+                  }
+              }
+
               show_table(json);
               active_table = json.table;
           } else {

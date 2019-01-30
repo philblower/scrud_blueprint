@@ -69,7 +69,17 @@ def table_view():
     # build the datatable column specification from the model dt_column_spec
     datatable_column_spec = []
     for model_attr, spec in class_.dt_column_spec.items():
-        datatable_column_spec.append({"title":spec["label"], "data":model_attr})
+        if "render" in spec:
+            datatable_column_spec.append(
+                {"title":spec["label"],
+                "data":model_attr,
+                "render":spec["render"]
+                })
+        else:
+            datatable_column_spec.append(
+                {"title":spec["label"],
+                "data":model_attr
+                })
 
     # construct the query
     if filter == "all":

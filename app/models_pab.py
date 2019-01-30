@@ -107,7 +107,7 @@ class All_mixin(object):
         """ The return value is displayed in tables that reference this class.
         Override this in child class to return another column (ie name)
         """
-        return self.id
+        return str(self.id)
 
     def set_computed_columns(self):
         """Models with computed columns should override set_computed_columns() This function should call methods implemented in individual models that compute values for computed columns.
@@ -270,7 +270,8 @@ class Company(db.Model, All_mixin):
         ("employees",
             {"label": "Employee Table"}),
         ("rev_per_employee",
-            {"label": "Rev Per Employee"})
+            {"label": "Rev Per Employee",
+             "render":"$.fn.dataTable.render.number(',', '.', 0, '$')"})
     ])
 
     form_spec = OrderedDict([
@@ -415,7 +416,8 @@ class Post(db.Model, All_mixin):
         ("user",
             {"label":"User"}),
         ("body",
-            {"label":"Body"}),
+            {"label":"Body",
+            "render": "jQuery.fn.dataTable.render.ellipsis( 17, false )"}),
         ("date",
             {"label":"Date"}),
         ("created_at",
@@ -430,7 +432,7 @@ class Post(db.Model, All_mixin):
         ("body",
             {"label":"Body",
             "placeholder": "body text",
-            "type": "text"
+            "type": "textarea"
             }),
         ("date",
             {"label":"Date",
@@ -482,10 +484,12 @@ class Pet(db.Model, All_mixin):
             {"label":"Weight (lbs)"}
         ),
         ("weight_kg",
-            {"label":"Weight (kg)"}
+            {"label":"Weight (kg)",
+             "render":"$.fn.dataTable.render.number(',', '.', 1)"}
         ),
         ("weight_st",
-            {"label":"Weight (st)"}
+            {"label":"Weight (st)",
+             "render":"$.fn.dataTable.render.number(',', '.', 1)"}
         )
     ])
 

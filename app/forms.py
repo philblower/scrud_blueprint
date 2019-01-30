@@ -2,12 +2,12 @@ from .models_chinook import *
 from .models_pab import *
 
 from . import db # from flaskr import db
+from wtforms import DateTimeField
 
 #*************************************************************
 # This is required to make WTForms_Alchemy work with Flask-WTF
 # See :  http://wtforms-alchemy.readthedocs.io/en/latest/advanced.html#using-wtforms-alchemy-with-flask-wtf
 from flask_wtf import FlaskForm
-from wtforms import DateTimeField
 from wtforms_alchemy import model_form_factory
 
 BaseModelForm = model_form_factory(FlaskForm)
