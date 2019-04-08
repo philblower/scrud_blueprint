@@ -1,9 +1,9 @@
 from collections import OrderedDict
 from sqlalchemy import ForeignKey, func
-from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declared_attr
 from sqlalchemy.inspection import inspect
 from . import db
+from . import ManySideRelationship
 
 """ Changes to sqlite chinook database:
 1. All primary key names set to "id"
@@ -14,7 +14,7 @@ class All_mixin(object):
     """
     # do not use bind_key because I'm using these models as default
     # sqlalchemy database URI.
-    # __bind_key__ = "models_chinook"
+    __bind_key__ = None
 
     # all WTForm classes will be name "model_classnameForm" by convention
     @declared_attr
@@ -44,9 +44,7 @@ class Album(db.Model, All_mixin):
         nullable=False
     )
 
-    artistid =  db.Column(db.Integer, ForeignKey("artist.id", ondelete="SET NULL", onupdate="SET NULL")) # employer
-    artist = relationship("Artist", back_populates="albums", uselist=True)
-
+    artistid =  db.Column(db.Integer, ForeignKey("artist.id", ondelete="SET NULL", onupdate="SET NULL"))
     dt_column_spec = OrderedDict([
         ("id",
             {"label":"Album ID"}
@@ -54,8 +52,9 @@ class Album(db.Model, All_mixin):
         ("title",
             {"label":"Title"}
         ),
-        ("artist",
+        ("artistid",
             {"label":"Artist",
+            "display_col":"name",
             "link":True}
         )
     ])
@@ -67,7 +66,7 @@ class Album(db.Model, All_mixin):
             "value":"",
             "type": "text"}
         ),
-        ("artist",
+        ("artistid",
             {"label":"Artist",
             "placeholder": "",
             "value":"",
@@ -85,7 +84,7 @@ class Artist(db.Model, All_mixin):
         db.String(120),
         nullable=True
     )
-    albums = relationship("Album", back_populates="artist", lazy="select")
+    albums = ManySideRelationship("Album", "artistid")
     dt_column_spec = OrderedDict([
         ("id",
             {"label":"Artist ID"}

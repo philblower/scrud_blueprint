@@ -8,14 +8,58 @@
       <div class="col-sm-6 bg-primary" id="table_name">Table</div>
     </div>
   </div>
+  <br>
+  <div class="container-fluid">
+    <!-- Table tabs -->
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#main_tab">Main Table</a></li>
+      <li><a data-toggle="tab" href="#linked_tab">Linked Table</a></li>
+    </ul>
 
-  <br />
-    <!-- DataTable container -->
-  <div class="container">
-    <div class="container" id="table_container">
-        <table class="display" id="myTable"></table>
-      <br />
-      <button type="button" class="button" id="create_record_button">create record</button>
+    <!-- Initialize table elements for main table tab (init all db tables) -->
+    <div class="tab-content">
+      <div id="main_tab" class="tab-pane fade in active">
+        <!-- Main DataTable container -->
+        <div class="container-fluid" id="table_container">
+          {% for t in dt_tables_config %}
+            <div class="container-fluid my_table_container" id="{{ 'container'+t['uid']|string }}">
+              <table id="{{ 'table'+t['uid']|string }}" class="display scrud_datatable" style="width:100%">
+                <thead>
+                  <tr>
+                    {% for col_title in t["th"] %}
+                      <th> {{ col_title }} </th>
+                    {% endfor %}
+                  </tr>
+                </thead>
+              </table>
+              <button type="button" class="button create_record_button" data-uid = "{{ t['uid']|string }} ">create record</button>
+            </div>
+          {% endfor %}
+        </div> <!-- End DataTable container -->
+      </div>
+
+      <!-- Init table elements for linked table tab (init all db tables) -->
+      <!-- Identical to main tab except container and table element ids start with 'l_*' -->
+      <div id="linked_tab" class="tab-pane fade">
+        <!-- Linked DataTable container -->
+        <div class="container-fluid" id="table_container">
+          {% for t in dt_tables_config %}
+            <div class="container-fluid my_l_table_container" id="{{ 'l_container'+t['uid']|string }}">
+              <p> Linked table : {{ t['tablename'] }}</p>
+              <table id="{{ 'l_table'+t['uid']|string }}" class="display scrud_datatable" style="width:100%">
+                <thead>
+                  <tr>
+                    {% for col_title in t["th"] %}
+                      <th> {{ col_title }} </th>
+                    {% endfor %}
+                  </tr>
+                </thead>
+              </table>
+              <button type="button" class="button create_record_button" data-uid = "{{ t['uid']|string }} ">create record</button>
+            </div>
+          {% endfor %}
+        </div> <!-- End DataTable container -->
+      </div>
     </div>
 
     <!-- create or update record form -->

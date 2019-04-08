@@ -1,6 +1,6 @@
 from sqlalchemy import inspect
-from sqlalchemy.orm import RelationshipProperty
-from app import db
+from flask import current_app
+from app import ManySideRelationship
 
 def str_to_bool(s):
     if s == "True" or s == "true":
@@ -16,36 +16,44 @@ def str_to_bool(s):
     else:
         return s
 
-def map_name_and_value(table_class, form_input_name, form_input_value):
-    """If form input is a relationship, get the related foreign key column (i.e. company -> company_id)
+def get_related_class(attr, modules):
+    """ Get the class referenced by a model attribute.
 
     Parameters
     ----------
-    table_class : sqlalchemy class
-    form_input_name : str
-        name of the form input (typically the foreign key relationship)
-    form_input_value : str
-        value returned from form input
+    attr : model column (sqlalchemy Column, ManySideRelationship class, sqlalchemy Column Foreign Key)
+    modules : sys.modules[__name__]
+        all loaded models and forms from TableConfig
 
     Returns
     -------
-
-    Notes
-    -----
-    The relationship column is not in the db.  It only exists within the python sqlalchemy namespace. Get foreign key column so that I can write directly to the database.
+    class_ : sqlalchemy class
+        related (child) class if one exists
     """
-    # .property and .prop.local_columns are sqlalchemy attributes
-    attr = getattr(table_class, form_input_name) # i.e. attr = Employee.company
-    if type(attr.property) is RelationshipProperty:
-        # get name of related foreign key column (i.e. company_id)
-        name = next(iter(attr.prop.local_columns)).name
-        # mysql expects an int, not a string for fk id's, set to python type None, and SQLAlchemy takes care of converting that to null.
-        if form_input_value == "None": # <select> returns "None" if a selection is not made
-            value = None
-        else:
-            value = str_to_bool(form_input_value)
-    else:
-        name = form_input_name
-        # convert form str to python type
-        value = str_to_bool(form_input_value)
-    return name, value
+    if isinstance(attr, ManySideRelationship): # col is the many-side of relationship
+        # check for isinstance of ManySideRelationship first, because attr.foreign_keys will fail if done on MSR
+        return getattr(modules, attr.related_classname)
+    elif attr.foreign_keys: # col is a foreign key (one-side of relationship), returns empty set if not a fk
+        fk = next(iter(attr.expression.foreign_keys)) #fk is in a set, so next(iter()) gets item from set
+        return getattr(modules, fk._table_key().capitalize())
+
+def get_uid_from_tablename(tablename):
+    """ Get the uid for the given tablename
+
+    Parameters
+    ----------
+    tablename : str
+        table name
+
+    Returns
+    -------
+    uid : int
+        table unique id
+
+    Note
+    ----
+    This assumes (and I've probably implicitly made this assumption in other code) that there isn't a table by the same name in another database.
+    """
+    class_ = getattr(current_app.tc.modules, tablename.capitalize())
+    database = current_app.config["SCRUD_BINDS"][getattr(class_, "__bind_key__")]
+    return current_app.tc.db_tables[database][tablename]

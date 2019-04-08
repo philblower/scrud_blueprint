@@ -1,5 +1,7 @@
+from flask import current_app
 from sqlalchemy.inspection import inspect
 from app import db
+from .helpers import get_related_class
 
 class SetFormInputHTML():
     """
@@ -17,7 +19,7 @@ class SetFormInputHTML():
     form_type : str
         one from set {"update", "create"} : type of modal to display
     class_ : sqlalchemy class
-        form will create/update a record in the table with this classname (i.e. Employee)
+        form will create/update a record in the table with this class name (i.e. Employee)
     column_name : str
         The model relationship attribute (i.e. company) whose records are displayed in the dropdown list
     record : sqlalchemy query result for one row
@@ -38,7 +40,7 @@ class SetFormInputHTML():
         self.column_name = column_name
 
     def get_dropdown_list(self):
-        """Build a list of (value, display_str) tuples for all records in the relationship table (ie Employee.company -- company is the relationship table). These records are displayed in the create/update record form dropdown inputs.
+        """Build a list of (value, display_str) tuples for all records in the relationship table (ie Employee.company_id -- company is the relationship table). These records are displayed in the create/update record form dropdown inputs.
 
         Parameters
         ----------
@@ -48,10 +50,11 @@ class SetFormInputHTML():
         ddl : [(value, display_str)] list of value (id or primary key) and display_str for dropdown lists
             lists all records in relationship table (ie company)
         """
-        related_class = getattr(self.class_, self.column_name).property.mapper.class_
+        attr = getattr(self.class_, self.column_name)
+        related_class = get_related_class(attr, current_app.tc.modules)
         q = db.session.query(related_class).all()
         pk_name = inspect(related_class).primary_key[0].name
-        ddl = [(None, f"Select {self.column_name}...")]
+        ddl = [(None, f"Select {self.label}...")]
         for r in q:
             # ddl.append((r.id, r.__str__()))
             ddl.append((getattr(r, pk_name), r.__str__()))
@@ -71,8 +74,7 @@ class SetFormInputHTML():
         # a dropdown is the same for update or create modal
         ddl = self.get_dropdown_list() # drop down list
         if self.form_type == "update": # get default value "selected" for dropdown
-            # record.column_name returns a model class in a list
-            selected_id = getattr(self.record, self.column_name)[0].id
+            selected_id = getattr(self.record, self.column_name)
         else:
             selected_id = None
 
@@ -134,7 +136,7 @@ class SetFormInputHTML():
         else: #create record form, show placeholder instead of value
             modal_title = 'create record'
             value = self.value
-        html += '<div class="input-group date" data-provide="datepicker" data-date-format="yyyy-mm-dd"><input type="text" class="form-control" id={col_name} name={col_name} placeholder={placeholder} value={value} {validate}></div>'.format(col_name=self.column_name, placeholder=self.placeholder, value=value, validate=self.validate)
+        html += '<div class="input-group date" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-autoclose=true data-date-today-highlight=true id=mydatepicker><input type="text" class="form-control" id={col_name} name={col_name} placeholder={placeholder} value={value} {validate}></div>'.format(col_name=self.column_name, placeholder=self.placeholder, value=value, validate=self.validate)
         return html
 
     def set_input_html(self):
@@ -152,40 +154,38 @@ class SetFormInputHTML():
         html += '<input class="form-control" id="{col_name}" name="{col_name}" type="{type}" placeholder="{placeholder}" value="{value}" {validate}>'.format(col_name=self.column_name, type=self.type, placeholder=self.placeholder, value=value, validate=self.validate)
         return html
 
-
-def set_function_icon_html(id, table):
+def set_function_icon_html(id, uid):
+    temp = f"<a data-id={id} data-uid={uid} ><span>update</span></a>"
     f_str  = '<div class="function_buttons"><ul class="list-inline">'
-    f_str = f_str + '<li class="function_update"><a data-id=' + str(id) + ' data-table=' + table  + '><span>update</span></a></li>'
-    f_str = f_str + '<li class="function_delete"><a data-id=' + str(id) + ' data-table=' + table + '><span>Delete</span></a></li>'
+    f_str = f_str + '<li class="function_update">' + temp + '</li>'
+    f_str = f_str + '<li class="function_delete">' + temp + '</li>'
     f_str = f_str + '</ul></div>'
     return f_str
 
-def set_table_link_html(database, tablename, link_str, row_id, link_id, key, filter):
-    """ build html for a link to a child table
+def set_table_link_html(uid, row_id, fk_id, fk, link_str):
+    """ Build html for a link to a child table
     (i.e. Each Company table row has a link to the Employee table.  That link will query the database for a list of all employees of that company.)
 
     Parameters
     ----------
-    database : str
-        name of mysql database with table to display
-    tablename : str
-        name of mysql table to display
-    link_str : str
-        link text
+    uid : int
+        unique id of requested table
     row_id : int
         id of the link's table row
-    link_id : int
-        if filter = 'fk', this id is not used and is set=0
-        if filter = 'pk', this is id of record pointed to by link
-    key : str
-        if foreign key: name of foreign key column (ie 'company_id')
-        if primary key: 'id'
-    filter : str
-        all :  get all rows of table
-        pk : get row given by id
-        fk : get row's from child table where the child_table.key == id
+    link_str : str
+        link text
+    fk_id : int
+        primary key id of desired row from related table
+        If pk_id = None, then this link is to the many side of the relationship and fk != None.
+    fk : str
+        Name of column with foreign key for related table
+        If fk = None, then this link is to the one side of the relationship and pk_id != None.
+
+    Notes
+    -----
+    fk_id and fk are both initialized to None. If the request is for the one side of a relationship, then pk_id will be set to a value in controllers.py/_set_row_links().  If the request is for the many side of a relationship, then fk will be set to a value in controllers.py/_set_row_links().
     """
-    return '<a id="table_link" data-database={database} data-tablename={tablename} data-row_id={row_id} data-link_id={link_id} data-key={key} data-filter={filter} href="#">{link_str}</a>'.format(database=database, tablename=tablename, link_str=link_str, row_id=row_id, link_id=link_id, key=key, filter=filter)
+    return '<a id="table_link" data-uid={uid} data-row_id={row_id} data-fk_id={fk_id} data-fk={fk} href="#">{link_str}</a>'.format(uid=uid, row_id=row_id, fk_id=fk_id, fk=fk, link_str=link_str)
 
 def set_form_html(class_, record, form_type):
     """ Defines the html form as an html string
@@ -209,7 +209,7 @@ def set_form_html(class_, record, form_type):
     if form_type == 'update': # show selected row values in form
         modal_title = 'Update record'
     else:
-        modal_title = 'create record'
+        modal_title = 'Create record'
     form_str = ''
     # make form input for each table column
     for column_name, spec in class_.form_spec.items():

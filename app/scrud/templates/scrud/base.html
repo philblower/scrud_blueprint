@@ -11,7 +11,9 @@
 
 {% block styles %}
   <link rel="shortcut icon" href="{{ url_for('scrud.static', filename = 'favicon.ico') }}" type="image/x-icon">
+
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen:400,700">
+
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
   <!-- DataTables CSS -->
@@ -23,6 +25,7 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ url_for('scrud.static', filename = 'layout.css') }}">
 
+  {# Call super to load flask-bootstrap styles #}
   {{ super() }}
 {% endblock %}
 
@@ -32,7 +35,6 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -43,17 +45,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href={{ url_for('dashboard.dashboard') }}> Dashboard <span class="sr-only">(current)</span></a></li>
-          {% for k, v in databases.items()|sort %}
+        <li>
+          <a href={{ url_for('dashboard.dashboard') }}> Dashboard </a>
+        </li>
+        {% for k, v in menumap.items()|sort %}
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ k }} <span class="caret"></span></a>
             <ul class="dropdown-menu" id="my_table_dropdown">
-              {% for table in v|sort %}
-                <li><a class="dropdown-item" data-database="{{ k }}" data-tablename="{{ table }}">{{ table }}</a></li>
+              {% for table, uid in v.items()|sort %}
+                <li><a class="dropdown-item" data-database="{{ k }}" data-tablename="{{ table }}" data-uid="{{ uid }}">{{ table }}</a></li>
               {% endfor %}
             </ul>
           </li>
-          {% endfor %}
+        {% endfor %}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -61,7 +65,6 @@
 {% endblock %}
 
 {% block scripts %}
-  <!-- Placed at the end of the document so the pages load faster -->
   {{super()}}
 
   <!-- Popper JS -->

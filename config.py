@@ -21,7 +21,7 @@ class Config:
 class DevelopmentConfig(Config):
     DEBUG = True
     DATABASE =  "sqlite" # {"mysql", "sqlite"} used for date conversions
-    EXPLAIN_TEMPLATE_LOADING = True
+    EXPLAIN_TEMPLATE_LOADING = False
     DATABASE_FILE_1 = "chinook.sqlite"
     DATABASE_FILE_2 = "pab.sqlite"
 
@@ -43,7 +43,7 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     DEBUG = False
     DATABASE =  "sqlite" # {"mysql", "sqlite"} used for date conversions
-    EXPLAIN_TEMPLATE_LOADING = True
+    EXPLAIN_TEMPLATE_LOADING = False
     DATABASE_FILE_1 = "chinook.sqlite"
     DATABASE_FILE_2 = "pab.sqlite"
 

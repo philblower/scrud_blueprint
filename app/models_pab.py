@@ -1,8 +1,8 @@
 from collections import OrderedDict
 from sqlalchemy import ForeignKey, func
-from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declared_attr
 from . import db
+from . import ManySideRelationship
 
 """ The dt_column_spec in each class sets the DataTable columns to show in the table and the column titles. The form_spec sets html form input labels, type of input, placeholder values and default values.
 
@@ -11,12 +11,15 @@ Example dt_column_spec
 
 *   Outer dict key must be the column or relationship variable name.  DataTables tables will have a column displayed for each dict in the column_spec.  Enter a dict for each column that you want to show in DataTables.
 
+    Column ordering is done on one column only.  If multiple columns have "order" set, then the last column set will be the sort order.
+
     dt_column_spec = OrderedDict([
         ("first_name",              # column or relationship attribute
             {"label":"First name"}
         ),
         ("last_name",
-            {"label":"Last name"}
+            {"label":"Last name",
+            "order":"asc"}          # ascending order using this column
         ),
         ("spouse",                  # one side of relationship
             {"label":"Spouse",
@@ -43,6 +46,9 @@ Example dt_column_spec
             False: column is shown as a value only, will not link to related table
             Only used on relationship columns (if entered for other columns it is ignored)
             If not specified, defaults to True for relationship columns
+        order : ['asc', 'desc']
+            The table will be ordered using this column
+            "order" should only be added to one column.  If more than one, then the order will be on the last column entered.
 
 Example form_spec
 -----------------
@@ -144,17 +150,16 @@ class Employee(db.Model, All_mixin):
     )
 
     company_id =  db.Column(db.Integer, ForeignKey("company.id", ondelete="SET NULL", onupdate="CASCADE")) # employer
-    # I intentionally named this "employer", rather than "company" to test the code for proper function if the attribute was not named the same as the model class in lowercase (which is my normal naming convention).
-    employer = relationship("Company", back_populates="employees", uselist=True)
     country_id = db.Column(db.Integer, ForeignKey("country.id", ondelete="SET NULL", onupdate="CASCADE"))
-    country = relationship("Country", back_populates="citizens", uselist=True)
-
     dt_column_spec = OrderedDict([
+        ("id",
+            {"label":"pk_id"}),
         ("first_name",
             {"label":"First name"}
         ),
         ("last_name",
-            {"label":"Last name"}
+            {"label":"Last name",
+             "order":"desc"} # ascending or descending order using this column
         ),
         ("date",
             {"label":"Date"}
@@ -165,12 +170,14 @@ class Employee(db.Model, All_mixin):
         ("married",
             {"label":"Married"}
         ),
-        ("employer",
+        ("company_id",
             {"label":"Employer",
+            "display_col":"name", # value in this column of related table is displayed
             "link":True}
         ),
-        ("country",
+        ("country_id",
             {"label":"Country",
+            "display_col":"name",
             "link":False}
         )
     ])
@@ -207,12 +214,12 @@ class Employee(db.Model, All_mixin):
             "value":"",
             "type": "boolean"}
         ),
-        ("employer",
+        ("company_id",
             {"label":"Employer",
             "value":"",
             "type": "dropdown"}
         ),
-        ("country",
+        ("country_id",
             {"label":"Country",
             "value":"",
             "type": "dropdown"}
@@ -234,9 +241,7 @@ class Company(db.Model, All_mixin):
     market_cap = db.Column(db.Float, nullable=False)
     headquarters = db.Column(db.String(255), nullable=False)
     rev_per_employee = db.Column(db.Float, nullable=True)
-
-    employees = relationship("Employee", back_populates="employer", lazy="select")
-
+    employees = ManySideRelationship("Employee", "company_id")
     # The return value is displayed in tables that reference this class.
     def __str__(self):
         return self.name
@@ -251,8 +256,11 @@ class Company(db.Model, All_mixin):
         self.rev_per_employee = 1.0e9 * self.revenue / self.num_employees
 
     dt_column_spec = OrderedDict([
+        ("id",
+            {"label":"pk_id"}),
         ("rank",
-            {"label": "Rank"}),
+            {"label": "Rank",
+            "order":"desc"}),
         ("name",
             {"label": "Name"}),
         ("industries",
@@ -267,11 +275,12 @@ class Company(db.Model, All_mixin):
             {"label": "Market Cap"}),
         ("headquarters",
             {"label": "Headquarters"}),
-        ("employees",
-            {"label": "Employee Table"}),
         ("rev_per_employee",
             {"label": "Rev Per Employee",
-             "render":"$.fn.dataTable.render.number(',', '.', 0, '$')"})
+             "render":"$.fn.dataTable.render.number(',', '.', 0, '$')"}),
+        ("employees",
+            {"label": "Employee Table",
+            "link":True})
     ])
 
     form_spec = OrderedDict([
@@ -327,9 +336,10 @@ class Country(db.Model, All_mixin):
 		nullable=False
 	)
     population = db.Column(db.Float, nullable=False)
-    citizens = relationship("Employee", back_populates="country", lazy="select")
-
+    citizens = ManySideRelationship("Employee", "country_id")
     dt_column_spec = OrderedDict([
+        ("id",
+            {"label":"pk_id"}),
         ("name",
             {"label":"Name"}),
         ("political_system",
@@ -374,18 +384,22 @@ class User(db.Model, All_mixin):
         db.String(255),
         nullable=False
     )
-    posts = relationship("Post", back_populates="user", lazy="select")
-    pets = relationship("Pet", back_populates="owner", lazy="select")
+    posts = ManySideRelationship("Post", "user_id")
+    pets = ManySideRelationship("Pet", "owner_id")
 
     dt_column_spec = OrderedDict([
+        ("id",
+            {"label":"pk_id"}),
         ("name",
             {"label":"Name"}),
         ("email",
             {"label":"Email"}),
         ("posts",
-            {"label":"Posts"}),
+            {"label":"Posts",
+            "link":True}),
         ("pets",
-            {"label":"Pets"})
+            {"label":"Pets",
+            "link":True})
     ])
 
     form_spec = OrderedDict([
@@ -409,23 +423,26 @@ class Post(db.Model, All_mixin):
     body = db.Column(db.Text)
     date = db.Column(db.Date, nullable=False)
     user_id =  db.Column(db.Integer, ForeignKey("user.id", ondelete="CASCADE", onupdate="CASCADE"))
-    user = relationship("User", back_populates="posts", uselist=True)
     created_at = db.Column(db.DateTime, server_default=func.now())
 
     dt_column_spec = OrderedDict([
-        ("user",
-            {"label":"User"}),
+        ("id",
+            {"label":"pk_id"}),
+        ("user_id",
+            {"label":"User",
+            "display_col":"name"}),
         ("body",
             {"label":"Body",
             "render": "jQuery.fn.dataTable.render.ellipsis( 17, false )"}),
         ("date",
             {"label":"Date"}),
         ("created_at",
-            {"label":"Created at"})
+            {"label":"Created at",
+             "order":"desc"}) # descending order using this column
     ])
 
     form_spec = OrderedDict([
-        ("user",
+        ("user_id",
             {"label":"User",
             "type": "dropdown"
             }),
@@ -458,7 +475,6 @@ class Pet(db.Model, All_mixin):
         nullable=False
     )
     owner_id =  db.Column(db.Integer, ForeignKey("user.id", ondelete="SET NULL", onupdate="CASCADE"))
-    owner = relationship("User", back_populates="pets", uselist=True)
     weight_lb = db.Column(
         db.Numeric(precision=5, asdecimal=False)
     )
@@ -470,18 +486,22 @@ class Pet(db.Model, All_mixin):
     )
 
     dt_column_spec = OrderedDict([
+        ("id",
+            {"label":"pk_id"}),
         ("name",
             {"label":"Name"}
         ),
         ("animal",
             {"label":"Animal"}
         ),
-        ("owner",
-            {"label":"Owner",
+        ("owner_id",
+            {"label":"Owner1",
+            "display_col":"name",
              "link":True}
         ),
         ("weight_lb",
-            {"label":"Weight (lbs)"}
+            {"label":"Weight (lbs)",
+             "order":"desc"}
         ),
         ("weight_kg",
             {"label":"Weight (kg)",
@@ -508,7 +528,7 @@ class Pet(db.Model, All_mixin):
             "type": "text",
             "validate": "required"}
         ),
-        ("owner",
+        ("owner_id",
             {"label":"Owner",
             "value":"",
             "type": "dropdown",

@@ -10,21 +10,26 @@
       </p>
       <br>
       <p>
-        Select database from menu to get a dropdown list of database tables.
+        <ul>
+          <li>Click 'Dashboard' to show this dashboard page</li>
+          <li>Click 'Database' to show page with menu links to database tables</li>
+          <li>Click 'Demo Table' to display a DataTable table with example data</li>
+          <li>Click 'Demo form' to display an example form and example DataTable</li>
+        </ul>
+        Demo table and Demo form show data coded directly into a python view function (not from database).  The purpose of these links was to demonstrate the HTML, jQuery and Flask code to request a table via a webpage link, construct the data set in Flask python, and return the data via JSON/AJAX to jQuery and DataTable.  The functions use the simplest constructs possible to demonstrate the request and response workflow.
       </p>
     </div>
   </div>
 
-  <div class="container">
-    {% with messages = get_flashed_messages(with_categories=True) %}
-      {% if messages %}
-        <div class="row">
-          <div class="col-md-12">
-            {{utils.flashed_messages(messages)}}
-          </div>
-        </div>
-      {% endif %}
-    {% endwith %}
+  <!-- DataTable table element for demonstration table -->
+  <hr>
+  <div class="panel panel-default">
+    <div class="panel-heading">Demo Table</div>
+    <div class="panel-body">
+      <div class="container-fluid" id="container_gen">
+        <table id="table_demo" class="display" style="width:100%"></table>
+      </div> <!-- End DataTable container -->
+    </div>
   </div>
 </main>
 {% endblock %}

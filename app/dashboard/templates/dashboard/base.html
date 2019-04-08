@@ -2,7 +2,7 @@
 
 {% block title %}Dashboard{% endblock %}
 
-{# Enable fixes for legacy browsers.#}
+{# Enable fixes for legacy browsers. #}
 {% import "bootstrap/fixes.html" as fixes %}
 
 {% block head %}
@@ -11,8 +11,13 @@
 
 {% block styles %}
   <link rel="shortcut icon" href="{{ url_for('dashboard.static', filename = 'favicon.ico') }}" type="image/x-icon">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{url_for('dashboard.static', filename='dashboard.css')}}">
+
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" >
+
+  <!-- Bootstrap DatePicker CSS -->
+  <link rel="stylesheet" href="{{ url_for('scrud.static', filename = 'bootstrap-datepicker3.standalone.css') }}" >
+
   {{super()}}
 {% endblock %}
 
@@ -29,11 +34,21 @@
       <a class="navbar-brand" href="#">SCRUDAdmin</a>
     </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href={{ url_for('dashboard.dashboard') }}> Dashboard <span class="sr-only">(current)</span></a>
+        <li>
+          <a href={{ url_for("dashboard.dashboard") }}>Dashboard</a>
         </li>
-        <li><a href={{ url_for('scrud.index') }}>Database</a></li>
+        <li>
+          <a href={{ url_for('scrud.index') }}>Database</a>
+        </li>
+        <li>
+          <a href="#" id="get_demo_table">Demo Table</a>
+        </li>
+        <li>
+          <a href="{{ url_for('dashboard.show_demo_form') }}" id="get_demo_form ">Demo form</a>
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -48,4 +63,16 @@
 {% block scripts %}
   <!-- Placed at the end of the document so the pages load faster -->
   {{super()}}
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <!-- DataTables JS -->
+  <script charset="utf-8" src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+  <!-- Bootstrap Datepicker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.8.0/js/bootstrap-datepicker.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script charset="utf-8" src="static/dashboard.js"></script>
 {% endblock %}
