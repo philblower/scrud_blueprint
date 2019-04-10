@@ -1,5 +1,10 @@
 # SCRUD Blueprint
 
+## Purpose :
+Given a database and table models (SQLAlchemy ORM python models) display any table in the database as a DataTables.net table.  The webapp automatically builds a dropdown menu with a link to each table.  When the link is clicked, the table is displayed with filtering and sorting capabilities provided by DataTables.  Links to related tables are provided in each table row that has a column defined by a foreign key.  Each row has buttons to edit or delete the row and each table has a create new record button.
+
+Computed columns can also be displayed in the table.  These columns are not in the database tables but are computed from database values.  Computed column algorithms are defined in the python models.
+
 ## To run :
 ~~~
 $ ./run.sh
