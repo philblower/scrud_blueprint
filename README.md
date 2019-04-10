@@ -5,6 +5,9 @@ Given a database and table models (SQLAlchemy ORM python models) display any tab
 
 Computed columns can also be displayed in the table.  These columns are not in the database tables but are computed from database values.  Computed column algorithms are defined in the python models.
 
+Database table image :
+![alt text](ex_table.jpeg)
+
 ## To run :
 ~~~
 $ ./run.sh
