@@ -76,6 +76,7 @@ Add a table named 'pet' to the database.  It will have columns for name, animal,
     1.2. Override set_computed_columns() and add the functions to compute the column values to the 'Pet' class. (Only do this if there are computed columns).
 
     1.3. Override \__str\__() to set the column with the values that are shown in dropdown lists.
+    
         ~~~
         class Pet(db.Model, All_mixin):
             id = db.Column(db.Integer, primary_key=True)
