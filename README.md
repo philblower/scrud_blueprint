@@ -77,7 +77,7 @@ Add a table named 'pet' to the database.  It will have columns for name, animal,
 
     1.3. Override \__str\__() to set the column with the values that are shown in dropdown lists.
     
-        ~~~
+    ~~~
         class Pet(db.Model, All_mixin):
             id = db.Column(db.Integer, primary_key=True)
             name = db.Column(
